@@ -1,0 +1,9 @@
+name: Brian Chuk
+description: Software Engineer
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
