@@ -7,5 +7,16 @@
 @import "reset";
 
 html {
-    color: red;
+    color: white;
+    background-color: #1B1919;
 }
+
+// http://getbem.com/introduction/
+// wrapper is the background
+// content displays the border
+// fade is for fadein
+.fade-content {
+    border: 24px solid #fff;
+    height: auto !important;
+}
+// content-holder will shrink for stuff
