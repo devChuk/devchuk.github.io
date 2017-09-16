@@ -4,19 +4,92 @@
 //
 // IMPORTS //
 //
-@import "reset";
+@import 'reset';
+@import 'variables';
+
+// general
 
 html {
     color: white;
-    background-color: #1B1919;
+    background-color: $darkGray;
+    font-family: 'Circular';
 }
 
-// http://getbem.com/introduction/
-// wrapper is the background
-// content displays the border
-// fade is for fadein
+a {
+    text-decoration: none;
+}
+
+canvas {    
+    position: fixed;
+}
+
+#twoDimCanvas {
+    background-color: $darkGray;
+    z-index: -50;
+}
+
+.transparent {
+    background-color: unset;
+}
+
+.light-gray {
+    color: black;
+    background-color: $lightGray;
+}
+
 .fade-content {
     border: 24px solid #fff;
-    height: auto !important;
+    display: block;
 }
-// content-holder will shrink for stuff
+
+.wide-content-wrapper {
+    width: 1630px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.thin-content-wrapper {
+    width: 1396px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;   
+}
+
+// custom
+
+.action {
+    font-family: 'Blender Pro';
+    font-weight: 700;
+    
+    font-size: 24px;
+    padding-top: 50px;
+}
+
+#full-name-title {
+    font-size: 144px;
+    padding-top: 40px;
+    // margin-left: -12px;
+    margin-left: -0.08em;
+}
+
+#short-bio {
+    font-size: 64px;
+    margin-left: -0.08em;
+    padding-top: 50px;
+    width: 775px;
+    line-height: 85px;
+
+    p {
+        padding-top: 1.2em;
+
+        a {
+            color: $gray;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+}
+

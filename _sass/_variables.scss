@@ -1,0 +1,98 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$red: #FC5824;
+
+// Grays
+$white: #FFF;
+$lightGray: #F4F4F4;
+$gray: #808080;
+$darkGray: #1B1919;
+$black: #000;
+
+// Font stacks
+@font-face {
+    font-family: 'Blender Pro';
+    font-style: normal;
+    src: url(../css/fonts/blenderpro-medium.ttf);
+}
+@font-face {
+    font-family: 'Blender Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../css/fonts/blenderpro-bold.ttf);
+}
+@font-face {
+    font-family: 'Blender Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../css/fonts/blenderpro-heavy.ttf);
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    src: url(../css/fonts/circular-book.ttf);
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: italic;
+    src: url(../css/fonts/circular-book-italic.ttf);
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../css/fonts/circular-medium.ttf);
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: italic;
+    font-weight: 600;
+    src: url(../css/fonts/circular-medium-italic.ttf);
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../css/fonts/circular-bold.ttf);
+}
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../css/fonts/circular-black.ttf);
+}
+
+@font-face {
+    font-family: 'Lyon Display';
+    font-style: normal;
+    src: url(../css/fonts/lyon-display-medium.ttf);
+}
+
+@font-face {
+    font-family: 'Lyon Text';
+    font-style: normal;
+    src: url(../css/fonts/lyon-text-regular.ttf);
+}
+@font-face {
+    font-family: 'Lyon Text';
+    font-style: italic;
+    src: url(../css/fonts/lyon-text-regular-italic.ttf);
+}
+@font-face {
+    font-family: 'Lyon Text';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../css/fonts/lyon-text-bold.ttf);
+}
+
+// Mobile breakpoints
+// @mixin mobile {
+//   @media screen and (max-width: 640px) {
+//     @content;
+//   }
+// }

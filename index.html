@@ -5,36 +5,43 @@
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <![endif]-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
         <link rel="stylesheet" href="/res/css/index.css" />
     </head>
     <body>
-        <div id='wrapper'>
-            <div id='content'>
-                <div class='fade-content'>
-                    <div class='content-holder'>
-                        <h1>Brian Chuk.</h1>
-                        <div>
-                            <p>
-                                I'm a software engineer born, raised, and residing in New York City.
-                            </p>
-                            <p>
-                                Now I work as a software engineering intern at B12. Previously, I've worked at Shaper, Betterpath, & Syncano.
-                            </p>
-                            <p>
-                                Computer Science senior at New York University. StuyCS alumnus. hackNY Fellow. Poké eater.
-                            </p>
-                            <div>
-                                I try to write every Sunday.
-                                Join my private mailing list
-                            </div>
-                        </div>
-                        <div style="height: 150vh;">
-                            LEARN MORE ABOUT ME
-                        </div>
+        <canvas id="twoDimCanvas" width="1920" height="1080"></canvas>
+        <div class="fade-content">
+            <div class="wrapper transparent">
+                <div class="wide-content-wrapper">
+                    <div id="full-name-title">Brian Chuk.</div>
+                    <div id="short-bio">
+                        <p>
+                            I'm a software engineer born, raised, and residing in New York City.
+                        </p>
+                        <p>
+                            Now I work as a full-stack engineering intern at <a href="http://b12.io">B12</a>. Previously, I've worked at <a href="http://shapertools.com">Shaper</a>, Betterpath, & <a href="http://syncano.io">Syncano</a>.
+                        </p>
+                        <p>
+                            Computer Science senior at New York University. StuyCS alumnus. <a href="http://hackny.org">hackNY Fellow</a>. Poké eater.
+                        </p>
+                        <p>
+                            I try to write every Sunday.
+                            <span>Join my private mailing list</span>
+                        </p>
+                    </div>
+                    <div class="action">
+                        LEARN MORE ABOUT ME
                     </div>
                 </div>
             </div>
+            <div class="wrapper light-gray">
+                <div class="thin-content-wrapper">
+                    WRITING
+                </div>
+            </div>
         </div>
+        <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.dev.js"></script>
+        <script src="./res/js/stargazer.dev.js" defer></script>
     </body>
 </html>
 
