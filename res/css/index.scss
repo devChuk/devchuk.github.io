@@ -62,6 +62,10 @@ section {
     // width: 1630px;
     width: 87vw;
     margin: 0 auto;
+
+    @media only screen and (max-width: 780px) {
+        width: 80vw;
+    }
 }
 
 .thin-content-wrapper {
@@ -84,11 +88,11 @@ section {
 
 #full-name-title {
     // font-size: 144px;
-    font-size: 7.7vw;
-    padding-top: 40px;
+    // padding-top: 40px;
     margin-left: -0.08em;
 
-    // padding-top: 2.14vw;
+    font-size: 7.7vw;
+    padding-top: 2.14vw;
 }
 
 #short-bio {
@@ -116,7 +120,7 @@ section {
         }
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 966px) {
         font-size: 3.4vw;
         width: 70vw;
     }
