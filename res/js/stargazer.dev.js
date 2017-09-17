@@ -1074,9 +1074,9 @@ var render = function () {
     }
 
     var timeElapsed = Date.now() - startTime;                       //8000, 18000.   1000, 5000.  2000, 7000
-    if (timeElapsed > 1000 && _stage == STAGE.SPHERE)
+    if (timeElapsed > 8000 && _stage == STAGE.SPHERE)
         startTransition(STAGE.STARFIELD);
-    else if (timeElapsed > 8000 && _stage == STAGE.STARFIELD)
+    else if (timeElapsed > 18000 && _stage == STAGE.STARFIELD)
         startTransition(STAGE.STAG);
     renderer.render(scene, camera);
 };

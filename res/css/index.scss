@@ -9,9 +9,12 @@
 
 // general
 
-html {
+html, .dark-gray-bg {
     color: white;
     background-color: $darkGray;
+}
+
+html {
     font-family: 'Circular';
 }
 
@@ -28,58 +31,78 @@ canvas {
     z-index: -50;
 }
 
-.transparent {
+.transparent-bg {
     background-color: unset;
 }
 
-.light-gray {
-    color: black;
+.light-gray-bg {
+    color: $black;
     background-color: $lightGray;
 }
 
+.section-title {
+    font-family: 'Blender Pro';
+    font-weight: 700;
+    font-size: 48px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+}
+
 .fade-content {
-    border: 24px solid #fff;
+    border: 19px solid #fff;
     display: block;
 }
 
-.wrapper {
+section {
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
 .wide-content-wrapper {
-    width: 1630px;
+    // width: 1630px;
+    width: 87vw;
     margin: 0 auto;
 }
 
 .thin-content-wrapper {
-    width: 1396px;
+    // width: 1396px;
+    width: 74.6vw;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.action {
+    padding-top: 50px;
+    font-family: 'Blender Pro';
+    font-weight: 700;
+    font-size: 24px;
+    // font-size: 1.3vw;
+    text-transform: uppercase;
 }
 
 // custom
 
-.action {
-    font-family: 'Blender Pro';
-    font-weight: 700;
-    
-    font-size: 24px;
-    padding-top: 50px;
-}
-
 #full-name-title {
-    font-size: 144px;
+    // font-size: 144px;
+    font-size: 7.7vw;
     padding-top: 40px;
-    // margin-left: -12px;
     margin-left: -0.08em;
+
+    // padding-top: 2.14vw;
 }
 
 #short-bio {
-    font-size: 64px;
+    // font-size: 64px;
     margin-left: -0.08em;
     padding-top: 50px;
     width: 775px;
-    line-height: 85px;
+    // line-height: 85px;
+
+
+    font-size: 3.4vw;
+    width: 41.4vw;
+    line-height: 4.5vw;
+
 
     p {
         padding-top: 1.2em;
@@ -94,3 +117,44 @@ canvas {
     }
 }
 
+#featured-post, #side-posts {
+    width: 50%;
+}
+
+#featured-post {
+    float: left;
+
+    div {
+        font-family: 'Circular';
+        font-size: 35px;
+        margin-top: 32px;
+    }
+}
+
+#side-posts {
+    float: right;
+
+    article {
+        margin-bottom: 11px;
+
+        img, span {
+            vertical-align: middle;
+        }
+
+        span {
+            float: right;
+            width: 60%;
+            font-size: 29px;
+            margin-left: 18px;
+            margin-top: 60px;
+        }
+    }
+
+    .action {
+        padding-top: 37px;
+    }
+}
+
+#projects img {
+    margin: 10px;
+}

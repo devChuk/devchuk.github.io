@@ -11,7 +11,7 @@
     <body>
         <canvas id="twoDimCanvas" width="1920" height="1080"></canvas>
         <div class="fade-content">
-            <div class="wrapper transparent">
+            <section class="transparent-bg">
                 <div class="wide-content-wrapper">
                     <div id="full-name-title">Brian Chuk.</div>
                     <div id="short-bio">
@@ -33,12 +33,41 @@
                         LEARN MORE ABOUT ME
                     </div>
                 </div>
-            </div>
-            <div class="wrapper light-gray">
+            </section>
+            <section class="light-gray-bg">
                 <div class="thin-content-wrapper">
-                    WRITING
+                    <div class="section-title">WRITING</div>
+
+                        <div id="featured-post">      
+                            <img src="./res/img/Flight.png" width="672px">
+                            <div>How to Travel the World as a Student Dev</div>
+                        </div>
+                        <div id="side-posts">
+                            <article>
+                                <img src="./res/img/Flight.png" width="213px">
+                                <span>Where the Pigeons Sleep</span>
+                            </article>
+                            <article>
+                                <img src="./res/img/Flight.png" width="213px">
+                                <span>Case Study: Drawing a Deer in the Stars</span>
+                            </article>
+                            <article>
+                                <img src="./res/img/Flight.png" width="213px">
+                                <span>The Notebook is now LIVE</span>
+                            </article>
+                            <div class="action">READ MORE ESSAYS</div>
+                        </div>
                 </div>
-            </div>
+            </section>
+            <section class="dark-gray-bg">
+                <div id="projects" class="wide-content-wrapper">
+                    <div class="section-title">SELECTED PROJECTS</div>
+                    <img src="./res/img/Flight.png" width="793px">
+                    <img src="./res/img/Flight.png" width="793px">
+                    <img src="./res/img/Flight.png" width="1630px">
+                    <div class="action">SEE FULL PORTFOLIO</div>
+                </div>
+            </section>
         </div>
         <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.dev.js"></script>
         <script src="./res/js/stargazer.dev.js" defer></script>
