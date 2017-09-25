@@ -29,8 +29,10 @@ canvas {
 #twoDimCanvas {
     background-color: $darkGray;
     z-index: -50;
-    display: none;
-    // TODO: FIX RESPONSIVENESS FOR ANIMATION
+    
+    @media only screen and (max-width: 966px) {
+        display: none;
+    }
 }
 
 .transparent-bg {
@@ -98,7 +100,7 @@ section {
 
     @media only screen and (max-width: 966px) {
         margin-left: -0.08em;
-        font-size: 91px;
+        font-size: 15vw;
     }
 }
 
@@ -132,6 +134,7 @@ section {
 
         font-size: 34px;
         line-height: 45px;
+        color: red;
 
         // font-size: 20px;
         // line-height: 26px;
