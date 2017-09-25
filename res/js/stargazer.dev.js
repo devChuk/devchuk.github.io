@@ -19,7 +19,6 @@ camera.position.z = 655;
 var canvas;
 
 // Runtime values
-var animComplete = false;
 var startTime;
 var STAGE = {
     TRANSITION: 0,
@@ -106,13 +105,19 @@ var rightEarPts = [];
 var mainStagV = [];
 var innerSnoutPts = [];
 
-var STAG = [sBorderV, sEyeV, sEarLV, sEarRV, sSnoutDetailAV, sSnoutDetailBV, sAntlerDetailV, leftEarPts, rightEarPts, mainStagV, innerSnoutPts]
+var STAG_VERTICES = [sBorderV, sEyeV, sEarLV, sEarRV, sSnoutDetailAV, sSnoutDetailBV, sAntlerDetailV, leftEarPts, rightEarPts, mainStagV, innerSnoutPts]
+var STAG_MODELS = [];
 
 // Interactivity
 var origMouseX = 0, origMouseY = 0;
 var mouseX = 0, mouseY = 0;
 var firstMove = true;
 var sphereX = 0; sphereY = 0;
+
+// Responsive magic
+var distMovedX = 0;
+var distMovedY = 0;
+var origVW = vw;
 
 // DEBUGGING
 var triangleColors = [];
@@ -121,7 +126,6 @@ var triangleColors = [];
 ////////////////////////////////////////LISTENERS////////////////////////////////////
 
 window.addEventListener('resize', onWindowResize, false);
-// document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
 ////////////////////////////////////////HELPER FUNCTIONS/////////////////////////////
 
@@ -134,28 +138,22 @@ function scalarPtMultiply(k, pt) {return {x: k*pt.x,y: k*pt.y};}
 function pointAdd(a, b) {return {x: a.x + b.x,y: a.y + b.y};}
 
 function onWindowResize() {
-    if (!animComplete) {
-        vw = window.innerWidth; vh = window.innerHeight;
-        camera.aspect = vw / vh;
-        camera.updateProjectionMatrix();
-        renderer.setSize( vw, vh );
-        // container = document.createElement( 'div' );
-        // document.body.appendChild( container );
-        canvas = document.getElementById("twoDimCanvas");
-        canvas.width = vw;
-        canvas.height = vh;
-    }
-    // stats = new Stats();                    //Generate FPS counter
-    // container.appendChild( stats.dom );
-    // starFieldM = [];
-    // starVelocities = [];
-    // initMeshes();
+    vw = window.innerWidth; vh = window.innerHeight;
+    camera.aspect = vw / vh;
+    camera.updateProjectionMatrix();
+    renderer.setSize( vw, vh );
+    canvas = document.getElementById("twoDimCanvas");
+    canvas.width = vw;
+    canvas.height = vh;
 
-    // vw = window.innerWidth; vh = window.innerHeight;
-    // camera.aspect = vw / vh;
-    // camera.updateProjectionMatrix();
-    // renderer.setSize( vw, vh );
-    // reset();
+    if (_stage = STAGE.STAG) {
+        // reset to original position based on distMovedX
+        moveStag(-distMovedX, 0);
+        // recalculate new dankness based on origVW vs vw
+        moveStag(vw - origVW, 0);
+        // basically, if vw > origVW, then move the offset further and etc
+        // move.
+    }
 }
 
 function areaOfTriangle(data, tIndexes) {
@@ -489,10 +487,13 @@ function fillPolygon(ctx, modelVertices) {
 }
 
 function moveStag(translateX, translateY) {
-    for (var i = 0; i < STAG.length; i++) {
-        for (var j = 0; j < STAG[i].length; j++) {
-            STAG[i][j].x += translateX;
-            STAG[i][j].y += translateY;
+    distMovedX += translateX;
+    distMovedY += translateY;
+
+    for (var i = 0; i < STAG_VERTICES.length; i++) {
+        for (var j = 0; j < STAG_VERTICES[i].length; j++) {
+            STAG_VERTICES[i][j].x += translateX;
+            STAG_VERTICES[i][j].y += translateY;
         }
     }
 
@@ -529,68 +530,45 @@ function initMeshes() {
     // test         this is pretty arbitrary
     // test1        currently a stagborder.
 
-    var stagScale = 200;        // 200
-    var stagOffsetX = 400;
-    var stagOffsetY = -90;
     loader.load('./res/models/sBorder.json', function(geometry) {
         sBorderM = new THREE.Mesh(geometry);
-        sBorderM.scale.x = sBorderM.scale.y = stagScale;
-        sBorderM.translateX(stagOffsetX);
-        sBorderM.translateY(stagOffsetY);
+        STAG_MODELS.push(sBorderM);
     });
     loader.load('./res/models/sEye.json', function(geometry) {
         sEyeM = new THREE.Mesh(geometry);
-        sEyeM.scale.x = sEyeM.scale.y = stagScale;
-        sEyeM.translateX(stagOffsetX);
-        sEyeM.translateY(stagOffsetY);
+        STAG_MODELS.push(sEyeM);
     });
     loader.load('./res/models/sEyeDetail.json', function(geometry) {
         sEyeDetailM = new THREE.Mesh(geometry);
-        sEyeDetailM.scale.x = sEyeDetailM.scale.y = stagScale;
-        sEyeDetailM.translateX(stagOffsetX);
-        sEyeDetailM.translateY(stagOffsetY);
+        STAG_MODELS.push(sEyeDetailM);
     });
     loader.load('./res/models/sEarL.json', function(geometry) {
         sEarLM = new THREE.Mesh(geometry);
-        sEarLM.scale.x = sEarLM.scale.y = stagScale;
-        sEarLM.translateX(stagOffsetX);
-        sEarLM.translateY(stagOffsetY);
+        STAG_MODELS.push(sEarLM);
     });
     loader.load('./res/models/sEarR.json', function(geometry) {
         sEarRM = new THREE.Mesh(geometry);
-        sEarRM.scale.x = sEarRM.scale.y = stagScale;
-        sEarRM.translateX(stagOffsetX);
-        sEarRM.translateY(stagOffsetY);
+        STAG_MODELS.push(sEarRM);
     });
     loader.load('./res/models/sSnout.json', function(geometry) {
         sSnoutM = new THREE.Mesh(geometry);
-        sSnoutM.scale.x = sSnoutM.scale.y = stagScale;
-        sSnoutM.translateX(stagOffsetX);
-        sSnoutM.translateY(stagOffsetY);
+        STAG_MODELS.push(sSnoutM);
     });
     loader.load('./res/models/sSnoutBridge.json', function(geometry) {
         sSnoutBridgeM = new THREE.Mesh(geometry);
-        sSnoutBridgeM.scale.x = sSnoutBridgeM.scale.y = stagScale;
-        sSnoutBridgeM.translateX(stagOffsetX);
-        sSnoutBridgeM.translateY(stagOffsetY);
+        STAG_MODELS.push(sSnoutBridgeM);
     });
     loader.load('./res/models/sSnoutDetailA.json', function(geometry) {
         sSnoutDetailAM = new THREE.Mesh(geometry);
-        sSnoutDetailAM.scale.x = sSnoutDetailAM.scale.y = stagScale;
-        sSnoutDetailAM.translateX(stagOffsetX);
-        sSnoutDetailAM.translateY(stagOffsetY);
+        STAG_MODELS.push(sSnoutDetailAM);
     });
     loader.load('./res/models/sSnoutDetailB.json', function(geometry) {
         sSnoutDetailBM = new THREE.Mesh(geometry);
-        sSnoutDetailBM.scale.x = sSnoutDetailBM.scale.y = stagScale;
-        sSnoutDetailBM.translateX(stagOffsetX);
-        sSnoutDetailBM.translateY(stagOffsetY);
+        STAG_MODELS.push(sSnoutDetailBM);
     });
     loader.load('./res/models/sAntlerDetail.json', function(geometry) {
         sAntlerDetailM = new THREE.Mesh(geometry);
-        sAntlerDetailM.scale.x = sAntlerDetailM.scale.y = stagScale;
-        sAntlerDetailM.translateX(stagOffsetX);
-        sAntlerDetailM.translateY(stagOffsetY);
+        STAG_MODELS.push(sAntlerDetailM);
     });
 }
 
@@ -617,6 +595,7 @@ function startTransition(newStage) {
             break;
 
         case STAGE.STAG:
+            // ayy. reposition the stag based on screen size at the time.
             setupStag();
             for (var i = 0; i < starFieldM.length; i++) {
                 if (i < sBorderV.length) {
@@ -727,7 +706,6 @@ function transitionTo(newStage) {
                 sSnoutM.geometry.dispose();
                 sSnoutM.material.dispose();
                 sSnoutM = undefined;
-
                 starFieldM = undefined;
                 starVelocities = undefined;
                 _distanceTravelled = undefined;
@@ -813,7 +791,22 @@ function renderStarfield(ctx) {
     drawConnections(closeEnough, ctx);
 }
 
+function reAdjustStag() {
+    origVW = vw;
+    var stagScale = 200;
+    var stagOffsetX = 510 + (-1865 + vw)/2.8;
+    var stagOffsetY = -40;
+
+    for (var i = 0; i < STAG_MODELS.length; i++) {
+        STAG_MODELS[i].scale.x = STAG_MODELS[i].scale.y = stagScale;
+        STAG_MODELS[i].translateX(stagOffsetX);
+        STAG_MODELS[i].translateY(stagOffsetY);
+    }
+}
+
 function setupStag() {
+    reAdjustStag();
+
     genProjectedVertices(sBorderM, sBorderV);
     genProjectedVertices(sEyeM, sEyeV);
     genProjectedVertices(sEyeDetailM, sEyeDetailV);
@@ -1048,6 +1041,9 @@ var setup = function () {
 
 var render = function () {
     renderID = window.requestAnimationFrame( render );
+    if (window.innerWidth <= 991) {
+        cancelAnimationFrame(renderID);
+    }
     // stats.update();    //Update FPS counter.
     var ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);

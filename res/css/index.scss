@@ -4,6 +4,7 @@
 //
 // IMPORTS //
 //
+// * 7.7 / 144
 @import 'reset';
 @import 'variables';
 
@@ -31,7 +32,7 @@ canvas {
     z-index: -50;
     
     @media only screen and (max-width: 966px) {
-        display: none;
+        // display: none;
     }
 }
 
@@ -63,7 +64,6 @@ section {
 }
 
 .wide-content-wrapper {
-    // width: 1630px;
     width: 87vw;
     margin: 0 auto;
 
@@ -73,7 +73,6 @@ section {
 }
 
 .thin-content-wrapper {
-    // width: 1396px;
     width: 74.6vw;
     margin: 0 auto;
     overflow: hidden;
@@ -84,15 +83,12 @@ section {
     font-family: 'Blender Pro';
     font-weight: 700;
     font-size: 24px;
-    // font-size: 1.3vw;
     text-transform: uppercase;
 }
 
 // custom
 
 #full-name-title {
-    // font-size: 144px;
-    // padding-top: 40px;
     margin-left: -0.08em;
 
     font-size: 7.7vw;
@@ -105,12 +101,9 @@ section {
 }
 
 #short-bio {
-    // font-size: 64px;
     margin-left: -0.08em;
     padding-top: 50px;
     width: 775px;
-    // line-height: 85px;
-
 
     font-size: 3.4vw;
     width: 41.4vw;
@@ -134,12 +127,6 @@ section {
 
         font-size: 34px;
         line-height: 45px;
-        color: red;
-
-        // font-size: 20px;
-        // line-height: 26px;
-
-
     }
 }
 
