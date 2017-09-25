@@ -95,6 +95,11 @@ section {
 
     font-size: 7.7vw;
     padding-top: 2.14vw;
+
+    @media only screen and (max-width: 966px) {
+        margin-left: -0.08em;
+        font-size: 91px;
+    }
 }
 
 #short-bio {
@@ -123,8 +128,15 @@ section {
     }
 
     @media only screen and (max-width: 966px) {
-        font-size: 3.4vw;
         width: 70vw;
+
+        font-size: 34px;
+        line-height: 45px;
+
+        // font-size: 20px;
+        // line-height: 26px;
+
+
     }
 }
 
