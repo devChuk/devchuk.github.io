@@ -4,7 +4,7 @@
 //
 // IMPORTS //
 //
-// * 7.7 / 144
+// * 7.7 / 144 magic ratio here.
 @import 'reset';
 @import 'variables';
 
@@ -28,12 +28,8 @@ canvas {
 }
 
 #twoDimCanvas {
+    z-index: -50;    
     background-color: $darkGray;
-    z-index: -50;
-    
-    @media only screen and (max-width: 966px) {
-        // display: none;
-    }
 }
 
 .transparent-bg {
@@ -41,21 +37,21 @@ canvas {
 }
 
 .light-gray-bg {
-    color: $black;
     background-color: $lightGray;
+    color: $black;
 }
 
 .section-title {
+    padding-bottom: 50px;
     font-family: 'Blender Pro';
     font-weight: 700;
     font-size: 48px;
-    padding-bottom: 50px;
     text-transform: uppercase;
 }
 
 .fade-content {
-    border: 19px solid #fff;
     display: block;
+    border: 19px solid #fff;
 }
 
 section {
@@ -64,8 +60,8 @@ section {
 }
 
 .wide-content-wrapper {
-    width: 87vw;
     margin: 0 auto;
+    width: 87vw;
 
     @media only screen and (max-width: 780px) {
         width: 80vw;
@@ -73,26 +69,29 @@ section {
 }
 
 .thin-content-wrapper {
-    width: 74.6vw;
     margin: 0 auto;
+    width: 74.6vw;
     overflow: hidden;
 }
 
 .action {
     padding-top: 50px;
     font-family: 'Blender Pro';
+    font-size: 1.5vw;
     font-weight: 700;
-    font-size: 24px;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 966px) {
+        font-size: 18px;
+    }
 }
 
-// custom
+// custom css for index. Will port into its own file & globalize above
 
 #full-name-title {
     margin-left: -0.08em;
-
-    font-size: 7.7vw;
     padding-top: 2.14vw;
+    font-size: 7.7vw;
 
     @media only screen and (max-width: 966px) {
         margin-left: -0.08em;
@@ -103,12 +102,9 @@ section {
 #short-bio {
     margin-left: -0.08em;
     padding-top: 50px;
-    width: 775px;
-
-    font-size: 3.4vw;
     width: 41.4vw;
+    font-size: 3.4vw;
     line-height: 4.5vw;
-
 
     p {
         padding-top: 1.2em;
@@ -124,60 +120,116 @@ section {
 
     @media only screen and (max-width: 966px) {
         width: 70vw;
-
         font-size: 34px;
         line-height: 45px;
     }
 }
 
-#featured-post, #side-posts {
-    width: 50%;
-}
+#blog-posts {
+    display: flex;
 
-#featured-post {
-    float: left;
-
-    div {
-        font-family: 'Circular';
-        font-size: 35px;
-        margin-top: 32px;
+    .featured-post > img {
+        width: 100%;
     }
-
-    img {
-        width: 672px;
-    }
-}
-
-#side-posts {
-    float: right;
 
     article {
-        margin-bottom: 11px;
-
-        img, span {
-            vertical-align: middle;
-        }
+        display: flex;
+        align-items: center;
 
         img {
-             width:213px;
+            flex: 0 0 auto;
+            height: 100%;
+            width: 31.15%;
+            max-width: 31.15%;
         }
 
         span {
-            float: right;
-            width: 60%;
-            font-size: 29px;
-            margin-left: 18px;
-            margin-top: 60px;
+            margin-left: 0.95vw;
+            width: 66%;
+            font-size: 1.55vw;
+            line-height: 1.71vw;
         }
     }
 
-    .action {
-        padding-top: 37px;
+    @media only screen and (min-width: 967px) {
+        flex-flow: row wrap;
+
+        .featured-post, .side-posts {
+            flex: 0 0 auto;
+            flex-basis: 48.8%;
+            width: 48.8%;
+            max-width: 48.8%;
+        }
+
+        #blog-title {
+            font-size: 1.9vw;
+        }
+
+        .featured-post {
+            margin-right: 0.29vw;
+        }
+
+        .side-posts {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.5vw;
+            height: inherit;
+
+            article {
+                flex: 0 0 31.15%;
+                margin-bottom: 2%;
+                height: 31.15%;
+                max-height: 31.15%;
+            }
+        }
+
+        > span {
+            align-self: baseline;
+            padding-top: 2.56vw;
+        }
+    }
+
+    @media only screen and (max-width: 966px) {
+        flex-direction: column;
+
+        div.featured-post {
+            width: 100%;
+        }
+
+        .featured-post {
+            order: 0;
+            align-self: center;
+            padding-bottom: 10px;
+            font-size: 3.9vw;
+        }
+
+        article {
+            padding-bottom: 10px;
+        }
+
+        .side-posts {
+            order: 1;
+
+            article {
+                img {
+                    flex: 0 0 auto;
+                    width: 31.15%;
+                    max-width: 31.15%;
+                    height: 100%;
+                }
+
+                span {
+                    margin-left: 0.95vw;
+                    width: 66%;
+                    font-size: 3.1vw;
+                    line-height: 3.42vw;
+                }
+            }
+        }
     }
 }
 
 #projects {
-    
     img {
         // padding: 10px;
     }
@@ -185,7 +237,6 @@ section {
     .half-image {
         // width: 789px;
         width: 49.9%;
-
     }
 
     .full-image {

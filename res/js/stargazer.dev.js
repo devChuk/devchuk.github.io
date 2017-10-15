@@ -122,22 +122,21 @@ var origVW = vw;
 // DEBUGGING
 var triangleColors = [];
 
-
 ////////////////////////////////////////LISTENERS////////////////////////////////////
 
 window.addEventListener('resize', onWindowResize, false);
 
 ////////////////////////////////////////HELPER FUNCTIONS/////////////////////////////
 
-function p(num) {return Math.pow(num, 2);}
-function sqrt(num) {return Math.sqrt(num);}
-function map_range(value, low1, high1, low2, high2) {return (low2 + (high2 - low2) * (value - low1) / (high1 - low1));}
-function reset() {this.scene = new THREE.Scene(); setup();}
-function distanceBetweenDimTwo(p1, p2) {return sqrt(p(p1.x - p2.x) + p(p1.y - p2.y));}
-function scalarPtMultiply(k, pt) {return {x: k*pt.x,y: k*pt.y};}
-function pointAdd(a, b) {return {x: a.x + b.x,y: a.y + b.y};}
+function p (num) {return Math.pow(num, 2);}
+function sqrt (num) {return Math.sqrt(num);}
+function map_range (value, low1, high1, low2, high2) {return (low2 + (high2 - low2) * (value - low1) / (high1 - low1));}
+function reset () {this.scene = new THREE.Scene(); setup();}
+function distanceBetweenDimTwo (p1, p2) {return sqrt(p(p1.x - p2.x) + p(p1.y - p2.y));}
+function scalarPtMultiply (k, pt) {return {x: k*pt.x,y: k*pt.y};}
+function pointAdd (a, b) {return {x: a.x + b.x,y: a.y + b.y};}
 
-function onWindowResize() {
+function onWindowResize () {
     vw = window.innerWidth; vh = window.innerHeight;
     camera.aspect = vw / vh;
     camera.updateProjectionMatrix();
@@ -146,17 +145,15 @@ function onWindowResize() {
     canvas.width = vw;
     canvas.height = vh;
 
-    if (_stage = STAGE.STAG) {
+    if (_stage == STAGE.STAG) {
         // reset to original position based on distMovedX
         moveStag(-distMovedX, 0);
-        // recalculate new dankness based on origVW vs vw
+        // recalculate new position based on origVW vs vw and move
         moveStag(vw - origVW, 0);
-        // basically, if vw > origVW, then move the offset further and etc
-        // move.
     }
 }
 
-function areaOfTriangle(data, tIndexes) {
+function areaOfTriangle (data, tIndexes) {
     // shoelace theorem
     var a = tIndexes[0];
     var b = tIndexes[1];
@@ -167,12 +164,12 @@ function areaOfTriangle(data, tIndexes) {
             (data[a].x - data[b].x) * (data[c].y - data[a].y)) / 2;
 }
 
-function onSeg(a, b, c) {
+function onSeg (a, b, c) {
     // checks if b lies on ac
     return distanceBetweenDimTwo(a,b) + distanceBetweenDimTwo(b,c) == distanceBetweenDimTwo(a,c);
 }
 
-function orientation(p, q, r) {
+function orientation (p, q, r) {
     var val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
     if (val == 0) {
         return 0;  // colinear
@@ -180,7 +177,7 @@ function orientation(p, q, r) {
     return (val > 0) ? 1: 2; // clock or counterclock wise
 }
 
-function doIntersect(p1, q1, p2, q2) { //border first
+function doIntersect (p1, q1, p2, q2) { //border first
     // checks for p1-q1 vs p2-q2
     var o1 = orientation(p1, q1, p2);
     var o2 = orientation(p1, q1, q2);
@@ -199,13 +196,11 @@ function doIntersect(p1, q1, p2, q2) { //border first
     return false; // Doesn't fall in any of the above cases
 }
 
-function lineSegExitsPolygn(a, b, polygon) {
+function lineSegExitsPolygn (a, b, polygon) {
     if (a.y >= 530 && b.y >= 530) {
         return false;
     }
-
     // loop thru all line segments of the polygon
-    // for (var i = 0; i < polygon.length - 1; i++) {
     for (var i = 80; i < 310; i++) {
         var c = polygon[i];
         var d = polygon[i+1];
@@ -214,11 +209,10 @@ function lineSegExitsPolygn(a, b, polygon) {
             return true;
         }
     }
-
     return false;
 }
 
-function projectToScreen(threeDimPoint) {
+function projectToScreen (threeDimPoint) {
     var point = threeDimPoint.clone();
     var winWidthHalf = (document.documentElement.clientWidth/2);
     var winHeightHalf = (document.documentElement.clientHeight/2);
@@ -229,9 +223,8 @@ function projectToScreen(threeDimPoint) {
     return point;
 };
 
-function projectModelVertices(mesh) {
+function projectModelVertices (mesh) {
     var startIndex = vertices.length;
-
     for (var i = 0; i < mesh.geometry.vertices.length; i++) {
         vertices.push(mesh.geometry.vertices[i].clone());
         vertices[i + startIndex].applyMatrix4(mesh.matrixWorld);
@@ -239,9 +232,8 @@ function projectModelVertices(mesh) {
     }
 }
 
-function genProjectedVertices(model, projectedVertices) {
+function genProjectedVertices (model, projectedVertices) {
     model.updateMatrixWorld();
-
     for (var i = 0; i < model.geometry.vertices.length; i++) {
         var b = model.geometry.vertices[i].clone();
         b.applyMatrix4(model.matrixWorld);
@@ -251,7 +243,7 @@ function genProjectedVertices(model, projectedVertices) {
     }
 }
 
-function genRandPtOutsideScreen(array, flag) {
+function genRandPtOutsideScreen (array, flag) {
     var perimeter = (canvas.width+ canvas.height) * 2;
     var LEFT = flag != null && flag.indexOf("LEFT") !== -1;
     var RIGHT = flag != null && flag.indexOf("RIGHT") !== -1;
@@ -289,7 +281,7 @@ function genRandPtOutsideScreen(array, flag) {
     }
 }
 
-function genRandPtFromTriangles(array, triObj, upperRandBound) {
+function genRandPtFromTriangles (array, triObj, upperRandBound) {
     var x;
     if (upperRandBound) {
         x = Math.random() * upperRandBound;
@@ -320,7 +312,7 @@ function genRandPtFromTriangles(array, triObj, upperRandBound) {
                         a));
 }
 
-function triangulate(arrayOfVertices, holeVertices) {
+function triangulate (arrayOfVertices, holeVertices) {
     var flattenedArray = [];
     var holeIndexes = [];
     var result = [];
@@ -347,7 +339,7 @@ function triangulate(arrayOfVertices, holeVertices) {
     return result;
 }
 
-function genTriangles(triangleObject, arrayOfVertices, holeVertices) {
+function genTriangles (triangleObject, arrayOfVertices, holeVertices) {
     triangleObject.i = triangulate(arrayOfVertices, holeVertices);
     triangleObject.v = arrayOfVertices;
     if (holeVertices) {
@@ -369,7 +361,7 @@ function genTriangles(triangleObject, arrayOfVertices, holeVertices) {
     }
 }
 
-function populateWithRandomPts(amount, target, triangles, upperRandBound) {
+function populateWithRandomPts (amount, target, triangles, upperRandBound) {
     var prevLength = target.length;
     for (var i = prevLength; i < prevLength + amount; i++) {
         genRandPtFromTriangles(target, triangles, upperRandBound);
@@ -383,7 +375,7 @@ function populateWithRandomPts(amount, target, triangles, upperRandBound) {
 }
 
 // JS only passes non-object arguments by value so this func requires some extra steps beforehand
-function setupPtObj(prevLength, target, payload, overrideProx) {
+function setupPtObj (prevLength, target, payload, overrideProx) {
     for (var i = prevLength; i < prevLength + payload.length; i++) {
         target[i].conn = [];
         var proximity;
@@ -399,14 +391,14 @@ function setupPtObj(prevLength, target, payload, overrideProx) {
     }
 }
 
-function drawLine(a, b, ctx) {
+function drawLine (a, b, ctx) {
     ctx.beginPath();
     ctx.moveTo(a.x, a.y);
     ctx.lineTo(b.x, b.y);
     ctx.stroke();
 }
 
-function drawConnections(distanceThreshold, ctx) {
+function drawConnections (distanceThreshold, ctx) {
     for (var i = 0; i < vertices.length; i++) {
         for (var j = i + 1; j < vertices.length; j++) {
             var dist = distanceBetweenDimTwo(vertices[i], vertices[j]);
@@ -419,7 +411,20 @@ function drawConnections(distanceThreshold, ctx) {
     }
 }
 
-function drawConnectionsInOrder(points, ctx, exceptions) {
+function drawConnectionsForStars (distanceThreshold, ctx) {
+    for (var i = 0; i < vertices.length; i++) {
+        for (var j = i + 1; j < vertices.length; j++) {
+            var dist = distanceBetweenDimTwo(vertices[i], vertices[j]);
+            if (dist < distanceThreshold) {
+                ctx.strokeStyle = '#ffffff';
+                ctx.globalAlpha = map_range(dist, 0, distanceThreshold, 0.3, 0);
+                drawLine(vertices[i], vertices[j], ctx);
+            }
+        }
+    }
+}
+
+function drawConnectionsInOrder (points, ctx, exceptions) {
     var index;
     if (exceptions) {
         index = 0;
@@ -436,7 +441,7 @@ function drawConnectionsInOrder(points, ctx, exceptions) {
     }
 }
 
-function drawConnectionsInOrderFull(points, ctx, exceptions) {
+function drawConnectionsInOrderFull (points, ctx, exceptions) {
     var index;
     if (exceptions) {
         index = 0;
@@ -453,7 +458,7 @@ function drawConnectionsInOrderFull(points, ctx, exceptions) {
     }
 }
 
-function drawEars(innerPts, borderPts, ctx) {
+function drawEars (innerPts, borderPts, ctx) {
     for (var i = 0; i < innerPts.length; i++) {
         for (var j = i + 1; j < innerPts.length; j++) {
             var dist = distanceBetweenDimTwo(innerPts[i], innerPts[j]);
@@ -475,18 +480,17 @@ function drawEars(innerPts, borderPts, ctx) {
     }
 }
 
-function fillPolygon(ctx, modelVertices) {
+function fillPolygon (ctx, modelVertices) {
     ctx.beginPath();
     ctx.globalAlpha = 1;//lazyFadeIn;
     for (var i = 0; i < modelVertices.length; i++) {
         ctx.lineTo(modelVertices[i].x, modelVertices[i].y);
-        // ctx.fillRect(b.x, b.y, 1, 1);
     }
     ctx.closePath();
     ctx.fill();
 }
 
-function moveStag(translateX, translateY) {
+function moveStag (translateX, translateY) {
     distMovedX += translateX;
     distMovedY += translateY;
 
@@ -505,7 +509,7 @@ function moveStag(translateX, translateY) {
 
 ////////////////////////////////////////RUNTIME FUNCTIONS////////////////////////////
 
-function initMeshes() {
+function initMeshes () {
     var loader = new THREE.JSONLoader();
     sphereM = new THREE.Mesh(new THREE.SphereGeometry(300, 15, 15));
 
@@ -572,7 +576,7 @@ function initMeshes() {
     });
 }
 
-function startTransition(newStage) {
+function startTransition (newStage) {
     _goalPointsSatisfied = [];
     _distanceTravelled = [];
     _goalPoints = [];
@@ -595,7 +599,7 @@ function startTransition(newStage) {
             break;
 
         case STAGE.STAG:
-            // ayy. reposition the stag based on screen size at the time.
+            // reposition the stag if the sceensize has been moved
             setupStag();
             for (var i = 0; i < starFieldM.length; i++) {
                 if (i < sBorderV.length) {
@@ -624,7 +628,7 @@ function startTransition(newStage) {
     transitionTo(newStage, _goalPoints);
 }
 
-function transitionTo(newStage) {
+function transitionTo (newStage) {
     var transitionComplete = true;
     _goalMovements = [];
     _speeds = [];
@@ -632,7 +636,7 @@ function transitionTo(newStage) {
         var diffX = _goalPoints[i].x - vertices[i].x;
         var diffY = _goalPoints[i].y - vertices[i].y;
         var magnitude = sqrt(p(diffX) + p(diffY));
-        // (progress == 1) => trip is 100% complete
+        // if (progress == 1) => trip is 100% complete
         var progress = _distanceTravelled[i] / (magnitude + _distanceTravelled[i]);
         var markerOne = 0.3;
         var markerTwo = 0.4;
@@ -682,7 +686,6 @@ function transitionTo(newStage) {
         closeEnoughChange = false;
     if (transitionComplete && closeEnoughChange) {
         _stage = newStage;
-
         switch(newStage) {
             case STAGE.STARFIELD:
                 sphereM.geometry.dispose();
@@ -717,12 +720,11 @@ function transitionTo(newStage) {
                 _sFadeIn = undefined;
                 _sGoalDistance = undefined;
             break;
-
         }
     }
 }
 
-function renderTransitions(ctx) {
+function renderTransitions (ctx) {
     switch(_newStage) {
         case STAGE.STARFIELD:
             for (var i = 0; i < starFieldM.length; i++) {
@@ -758,13 +760,20 @@ function renderTransitions(ctx) {
             break;
     }
     transitionTo(_newStage);
-    drawConnections(closeEnough, ctx);
+    switch(_newStage) {
+        case STAGE.STARFIELD:
+            drawConnectionsForStars(closeEnough, ctx);
+            break;
+        case STAGE.STAG:
+            drawConnections(closeEnough, ctx);
+            break;
+    }
 }
 
-function renderSphere(ctx) {
+function renderSphere (ctx) {
     vertices = [];
     genProjectedVertices(sphereM, vertices);
-    drawConnections(closeEnough, ctx);
+    drawConnectionsForStars(closeEnough, ctx);
     sphereM.rotation.x = mouseY;
     sphereM.rotation.y = mouseX;
 
@@ -777,7 +786,7 @@ function renderSphere(ctx) {
 
 }
 
-function renderStarfield(ctx) {
+function renderStarfield (ctx) {
     vertices = [];
     for (var i = 0; i < starFieldM.length; i++) {
         starFieldM[i].x += starVelocities[i].dx;
@@ -788,10 +797,10 @@ function renderStarfield(ctx) {
             starVelocities[i].dy *= -1;
         vertices.push(starFieldM[i]);
     }
-    drawConnections(closeEnough, ctx);
+    drawConnectionsForStars(closeEnough, ctx);
 }
 
-function reAdjustStag() {
+function reAdjustStag () {
     origVW = vw;
     var stagScale = 200;
     var stagOffsetX = 510 + (-1865 + vw)/2.8;
@@ -804,7 +813,7 @@ function reAdjustStag() {
     }
 }
 
-function setupStag() {
+function setupStag () {
     reAdjustStag();
 
     genProjectedVertices(sBorderM, sBorderV);
@@ -944,17 +953,9 @@ function setupStag() {
             }
         }
     }
-
-    if (true) {
-        // debug start !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // for (var i = 0; i < 383; i++) {
-        //     triangleColors.push('hsl(' + 360 * Math.random() + ', 50%, 50%)');
-        // }
-        // debug end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    }
 }
 
-function renderStag(ctx) {
+function renderStag (ctx) {
     if (lazyFadeIn <= 1) {
         lazyFadeIn = lazyFadeIn + 0.01;
     }
@@ -1002,13 +1003,9 @@ function renderStag(ctx) {
     // snout
 }
 
-function tempTriangleDraw(ctx, triObj) {
+function tempTriangleDraw (ctx, triObj) {
     for (var j = 0; j < triObj.i.length; j++) {
-        // ctx.fillStyle = "#00000";//triangleColors[j];
         ctx.fillStyle = triangleColors[j];
-        // if (baseTriangles.v.length === 383 && 360 < j && j < 383) {
-        //     ctx.fillStyle = "#ff0000";
-        // }
         ctx.globalAlpha = 1;
         ctx.beginPath();
         ctx.moveTo(triObj.v[triObj.i[j][0]].x, triObj.v[triObj.i[j][0]].y);
@@ -1030,8 +1027,6 @@ var setup = function () {
     canvas = document.getElementById("twoDimCanvas");
     canvas.width = vw;
     canvas.height = vh;
-    // stats = new Stats();                    //Generate FPS counter
-    // container.appendChild( stats.dom );
     starFieldM = [];
     starVelocities = [];
     initMeshes();
@@ -1044,7 +1039,6 @@ var render = function () {
     if (window.innerWidth <= 991) {
         cancelAnimationFrame(renderID);
     }
-    // stats.update();    //Update FPS counter.
     var ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -1063,14 +1057,10 @@ var render = function () {
 
         case STAGE.STAG:
             renderStag(ctx);
-            // if (lazyFadeIn >= .99) {
-            //     animComplete = true;
-            //     cancelAnimationFrame(renderID);
-            // }
             break;
     }
 
-    var timeElapsed = Date.now() - startTime;                       //8000, 18000.   1000, 5000.  2000, 7000
+    var timeElapsed = Date.now() - startTime;
     if (timeElapsed > 2000 && _stage == STAGE.SPHERE)
         startTransition(STAGE.STARFIELD);
     else if (timeElapsed > 7000 && _stage == STAGE.STARFIELD)      //8000, 18000
@@ -1080,15 +1070,9 @@ var render = function () {
 
 ////////////////////////////////////////RUN/////////////////////////
 
-// THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
-//     console.log(item, loaded, total);
-// };
-
-THREE.DefaultLoadingManager.onLoad = function() {
+THREE.DefaultLoadingManager.onLoad = function () {
     startTime = Date.parse(new Date());
     render();
 }
 
 setup();
-
-// cancelAnimationFrame( renderID );
