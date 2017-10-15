@@ -42,10 +42,11 @@ canvas {
 }
 
 .section-title {
-    padding-bottom: 50px;
+    padding-bottom: 19px;
+    width: 100%;
     font-family: 'Blender Pro';
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     text-transform: uppercase;
 }
 
@@ -57,6 +58,11 @@ canvas {
 section {
     padding-top: 5.35vw;
     padding-bottom: 5.35vw;
+
+    @media only screen and (max-width: 780px) {
+        padding-top: 13vw;
+        padding-bottom: 13vw;
+    }
 }
 
 .wide-content-wrapper {
@@ -76,12 +82,14 @@ section {
 
 .action {
     padding-top: 50px;
+    width: 100%;
     font-family: 'Blender Pro';
     font-size: 1.5vw;
     font-weight: 700;
     text-transform: uppercase;
 
     @media only screen and (max-width: 966px) {
+        padding-top: 18px;
         font-size: 18px;
     }
 }
@@ -122,6 +130,11 @@ section {
         width: 70vw;
         font-size: 34px;
         line-height: 45px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 21.8px;
+        line-height: 33px;
     }
 }
 
@@ -185,7 +198,7 @@ section {
 
         > span {
             align-self: baseline;
-            padding-top: 2.56vw;
+            padding-top: 0.5vw;
         }
     }
 
@@ -194,12 +207,21 @@ section {
 
         div.featured-post {
             width: 100%;
+            padding-bottom: 10px;
+        }
+
+        #blog-title {
+            padding-bottom: 25px;
+
+            @media only screen and (max-width: 480px) {
+                font-size: 22px;
+                line-height: 22px;
+            }
         }
 
         .featured-post {
             order: 0;
             align-self: center;
-            padding-bottom: 10px;
             font-size: 3.9vw;
         }
 
@@ -223,6 +245,12 @@ section {
                     width: 66%;
                     font-size: 3.1vw;
                     line-height: 3.42vw;
+
+                    @media only screen and (max-width: 480px) {
+                        margin-left: 2vw;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
                 }
             }
         }
@@ -230,18 +258,30 @@ section {
 }
 
 #projects {
+    display: flex;
+    flex-flow: row wrap;
+
     img {
-        // padding: 10px;
+        padding: 6px;
+        
+        @media only screen and (max-width: 480px) {
+            padding: 3px;
+        }
     }
 
     .half-image {
-        // width: 789px;
+        flex: 0 0 auto;
+        flex-basis: 49.9%;
         width: 49.9%;
+        max-width: 49.9%;
+        height: 100%;
     }
 
     .full-image {
-        // width: 1630px;
-        // width: 74.33vw;
+        flex: 0 0 auto;
+        flex-basis: 100%;
         width: 100%;
+        max-width: 100%;
+        height: 100%;
     }
 }
