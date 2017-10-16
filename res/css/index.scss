@@ -19,18 +19,64 @@ html {
     font-family: 'Circular';
 }
 
-a {
-    text-decoration: none;
+.fade-content {
+    display: block;
+    border: 19px solid #fff;
+}
+
+header {
+    // display: flex;
+    position: fixed;
+
+    span {
+
+    }
+
+    span:first-child {
+        color: blue;
+    }
+
+    span:last-child {
+        color: green;
+        // float: right;
+    }
 }
 
 canvas {    
     position: fixed;
-}
-
-#twoDimCanvas {
-    z-index: -50;    
+    z-index: -50;
     background-color: $darkGray;
 }
+
+section {
+    padding-top: 5.35vw;
+    padding-bottom: 5.35vw;
+
+    @media only screen and (max-width: 780px) {
+        padding-top: 13vw;
+        padding-bottom: 13vw;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.wide-content-wrapper {
+    margin: 0 auto;
+    width: 87vw;
+
+    @media only screen and (max-width: 780px) {
+        width: 80vw;
+    }
+}
+
+.thin-content-wrapper {
+    margin: 0 auto;
+    width: 74.6vw;
+    overflow: hidden;
+}
+
 
 .transparent-bg {
     background-color: unset;
@@ -48,36 +94,6 @@ canvas {
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
-}
-
-.fade-content {
-    display: block;
-    border: 19px solid #fff;
-}
-
-section {
-    padding-top: 5.35vw;
-    padding-bottom: 5.35vw;
-
-    @media only screen and (max-width: 780px) {
-        padding-top: 13vw;
-        padding-bottom: 13vw;
-    }
-}
-
-.wide-content-wrapper {
-    margin: 0 auto;
-    width: 87vw;
-
-    @media only screen and (max-width: 780px) {
-        width: 80vw;
-    }
-}
-
-.thin-content-wrapper {
-    margin: 0 auto;
-    width: 74.6vw;
-    overflow: hidden;
 }
 
 .action {
