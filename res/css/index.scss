@@ -26,19 +26,12 @@ html {
 
 header {
     position: fixed;
+    top: 56px;
     width: 100%;
 
-    top: 56px;
-
-    // left: 50vw;
-    // margin-left: -43.9vw;
-    // padding-left: 19px;
-    // margin-left: -43.5vw;
-
-    // span:first-child {
-    //     color: blue;
-    //     // left: 5.3vw;
-    // }
+    @media only screen and (max-width: 650px) {
+        top: 34px;
+    }
 
     span:last-child {
         float: right;
@@ -58,6 +51,7 @@ header {
         }
 
         @media only screen and (max-width: 650px) {
+
             img {
                 color: $gray;
                 display: inline-block;
