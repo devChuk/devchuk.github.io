@@ -13,6 +13,9 @@ $gray: #808080;
 $darkGray: #1B1919;
 $black: #000;
 
+// Constants
+
+
 // Font stacks
 @font-face {
     font-family: 'Blender Pro';
@@ -89,10 +92,3 @@ $black: #000;
     font-weight: 700;
     src: url(../css/fonts/lyon-text-bold.ttf);
 }
-
-// Mobile breakpoints
-// @mixin mobile {
-//   @media screen and (max-width: 640px) {
-//     @content;
-//   }
-// }

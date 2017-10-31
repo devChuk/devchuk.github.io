@@ -25,20 +25,49 @@ html {
 }
 
 header {
-    // display: flex;
     position: fixed;
+    width: 100%;
 
-    span {
+    top: 56px;
 
-    }
+    // left: 50vw;
+    // margin-left: -43.9vw;
+    // padding-left: 19px;
+    // margin-left: -43.5vw;
 
-    span:first-child {
-        color: blue;
-    }
+    // span:first-child {
+    //     color: blue;
+    //     // left: 5.3vw;
+    // }
 
     span:last-child {
-        color: green;
-        // float: right;
+        float: right;
+        
+        li {
+            font-family: 'Blender Pro';
+            text-transform: uppercase;
+            display: inline-block;
+            // width: 84px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        img {
+            display: none;
+        }
+
+        @media only screen and (max-width: 650px) {
+            img {
+                color: $gray;
+                display: inline-block;
+                height: 20px;
+            }
+
+            ul {
+                display: none;
+            }
+        }
     }
 }
 
@@ -59,6 +88,7 @@ section {
 }
 
 a {
+    color: $gray;
     text-decoration: none;
 }
 
@@ -75,6 +105,10 @@ a {
     margin: 0 auto;
     width: 74.6vw;
     overflow: hidden;
+
+    @media only screen and (max-width: 780px) {
+        width: 80vw;
+    }   
 }
 
 
