@@ -29,7 +29,7 @@ header {
     top: 38px;
     width: 100%;
 
-    @media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 900px) {
         top: 34px;
     }
 
@@ -50,7 +50,7 @@ header {
             display: none;
         }
 
-        @media only screen and (max-width: 650px) {
+        @media only screen and (max-width: 900px) {
 
             img {
                 color: $gray;
