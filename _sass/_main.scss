@@ -1,0 +1,154 @@
+//
+// IMPORTS //
+//
+@import 'reset';
+@import 'variables';
+@import 'hamburger';
+
+
+html, .dark-gray-bg {
+    color: white;
+    background-color: $darkGray;
+}
+
+html {
+    font-family: 'Circular';
+}
+
+.fade-content {
+    display: block;
+    border: 19px solid #fff;
+}
+
+header {
+    position: fixed;
+    top: 38px;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        top: 34px;
+    }
+
+    > div > span:nth-child(2) {
+        float: right;
+
+        button {
+            display: none;
+
+            @media only screen and (max-width: 900px) {
+                display: inline-block;
+                position: fixed;
+                right: 9vw;
+                z-index: 20;
+            }
+        }
+    }
+
+    > div > span:last-child {
+        float: right;
+        z-index: 10;
+        
+        li {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: 'Blender Pro';
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 900px) {
+            display: none;
+            float: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            opacity: 0;
+
+            li {
+                display: block;
+                width: 100vw;
+                height: 25vh;
+                line-height: 25vh;
+                font-size: 8vmin;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+canvas {    
+    position: fixed;
+    z-index: -100;
+    background-color: $darkGray;
+}
+
+section {
+    padding-top: 5.35vw;
+    padding-bottom: 5.35vw;
+
+    @media only screen and (max-width: 780px) {
+        padding-top: 13vw;
+        padding-bottom: 13vw;
+    }
+}
+
+a {
+    color: $gray;
+    text-decoration: none;
+}
+
+.wide-content-wrapper {
+    margin: 0 auto;
+    width: 87vw;
+
+    @media only screen and (max-width: 780px) {
+        width: 80vw;
+    }
+}
+
+.thin-content-wrapper {
+    margin: 0 auto;
+    width: 74.6vw;
+    overflow: hidden;
+
+    @media only screen and (max-width: 780px) {
+        width: 80vw;
+    }   
+}
+
+
+.transparent-bg {
+    background-color: unset;
+}
+
+.light-gray-bg {
+    background-color: $lightGray;
+    color: $black;
+}
+
+.section-title {
+    padding-bottom: 19px;
+    width: 100%;
+    font-family: 'Blender Pro';
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.action {
+    padding-top: 50px;
+    width: 100%;
+    font-family: 'Blender Pro';
+    font-size: 1.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: 966px) {
+        padding-top: 18px;
+        font-size: 18px;
+    }
+}

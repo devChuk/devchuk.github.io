@@ -1,37 +1,15 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <![endif]-->
+        {% include head.html %}
          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
-        <link rel="stylesheet" href="./res/css/index.css"/>
     </head>
     <body>
         <canvas display="None" id="twoDimCanvas" width="1920" height="1080"></canvas>
-        <header>
-            <div class="wide-content-wrapper">
-                <span><a href="./">Brian Chuk.</a></span>
-                <span>
-                    <button id="menu-icon" class="hamburger hamburger--squeeze" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </span>
-                <span id="navigation">
-                    <ul>
-                        <li><a href="./about">About</a></li>
-                        <li><a href="./blog">Writing</a></li>
-                        <li><a href="./projects">Portfolio</a></li>
-                        <li><a href="./contact">Contact</a></li>
-                    </ul>
-                </span>
-            </div>
-        </header>
+        {% include header.html %}
         <div class="fade-content">
             <section class="transparent-bg">
                 <div class="wide-content-wrapper">
@@ -90,6 +68,6 @@
         </div>
         <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.dev.js"></script>
         <script src="./res/js/load_stargazer.dev.js" defer></script>
-        <script src="./res/js/menu_nav.dev.js" defer></script>
+        {% include body.html %}
     </body>
 </html>
