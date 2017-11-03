@@ -95,7 +95,6 @@ function displayOnDesktop () {
         }
 
         showNav = false;
-        // toggleClass(menuButton, 'is-active');
     } else if (window.innerWidth <= 900 && showNav === false) {
         navigation.style.display = 'none';
         navigation.style.opacity = 0;
