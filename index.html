@@ -7,22 +7,28 @@
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <![endif]-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
         <link rel="stylesheet" href="./res/css/index.css"/>
     </head>
     <body>
         <canvas display="None" id="twoDimCanvas" width="1920" height="1080"></canvas>
         <header>
             <div class="wide-content-wrapper">
-                <span><a href="./about">Brian Chuk.</a></span>
+                <span><a href="./">Brian Chuk.</a></span>
                 <span>
+                    <button id="menu-icon" class="hamburger hamburger--squeeze" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </span>
+                <span id="navigation">
                     <ul>
                         <li><a href="./about">About</a></li>
                         <li><a href="./blog">Writing</a></li>
                         <li><a href="./projects">Portfolio</a></li>
                         <li><a href="./contact">Contact</a></li>
                     </ul>
-                    <img src="./res/icons/menu-gray.svg">
                 </span>
             </div>
         </header>
@@ -33,7 +39,7 @@
                     <div id="short-bio">
                         <p>I'm a software engineer born, raised, and residing in New York City.</p>
                         <p>
-                            Now I work as a full-stack engineering intern at <a href="http://b12.io" title="Helped develop a human-assisted AI that builds websites.">B12</a>. Previously, I've worked at <a href="http://shapertools.com" title="Contributed towards the world's first handheld CNC machine.">Shaper</a>, <a href="https://www.betterpath.com"  title="Built a platform to help patients better understand their medical record data.">Betterpath</a>, <a href="http://kiteandrocket.com" title="Engineered a flying camera drone that flew out for 50 miles from NYC to Jones Beach to the Atlantic Ocean.">Kite and Rocket Research</a>, &amp; <a href="http://syncano.io" title="Improved a BaaS that enabled devs to focus less on serverside code.">Syncano</a>.
+                            I've worked at <a href="http://b12.io" title="Helped develop a human-assisted AI that builds websites.">B12</a>, <a href="http://shapertools.com" title="Contributed towards the world's first handheld CNC machine.">Shaper</a>, <a href="https://www.betterpath.com"  title="Built a platform to help patients better understand their medical record data.">Betterpath</a>, <a href="http://kiteandrocket.com" title="Engineered a flying camera drone that flew out for 50 miles from NYC to Jones Beach to the Atlantic Ocean.">Kite and Rocket Research</a>, &amp; <a href="http://syncano.io" title="Improved a BaaS that enabled devs to focus less on serverside code.">Syncano</a>.
                         </p>
                         <p>
                             Computer Science senior at New York University. StuyCS alumnus. <a href="http://hackny.org">hackNY Fellow</a>. Poké eater.
@@ -84,5 +90,6 @@
         </div>
         <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.dev.js"></script>
         <script src="./res/js/load_stargazer.dev.js" defer></script>
+        <script src="./res/js/menu_nav.dev.js" defer></script>
     </body>
 </html>

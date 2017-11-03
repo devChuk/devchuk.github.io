@@ -7,6 +7,7 @@
 // * 7.7 / 144 magic ratio here.
 @import 'reset';
 @import 'variables';
+@import 'hamburger';
 
 // general
 
@@ -33,33 +34,52 @@ header {
         top: 34px;
     }
 
-    span:last-child {
+    > div > span:nth-child(2) {
         float: right;
+
+        button {
+            display: none;
+
+            @media only screen and (max-width: 900px) {
+                display: inline-block;
+                position: fixed;
+                right: 9vw;
+                z-index: 20;
+            }
+        }
+    }
+
+    > div > span:last-child {
+        float: right;
+        z-index: 10;
         
         li {
-            font-family: 'Blender Pro';
-            text-transform: uppercase;
             display: inline-block;
-            // width: 84px;
             margin-left: 10px;
             margin-right: 10px;
+            font-family: 'Blender Pro';
+            text-transform: uppercase;
             text-align: center;
         }
 
-        img {
-            display: none;
-        }
-
         @media only screen and (max-width: 900px) {
+            display: none;
+            float: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            opacity: 0;
 
-            img {
-                color: $gray;
-                display: inline-block;
-                height: 20px;
-            }
-
-            ul {
-                display: none;
+            li {
+                display: block;
+                width: 100vw;
+                height: 25vh;
+                line-height: 25vh;
+                font-size: 8vmin;
+                opacity: 0;
             }
         }
     }
@@ -67,7 +87,7 @@ header {
 
 canvas {    
     position: fixed;
-    z-index: -50;
+    z-index: -100;
     background-color: $darkGray;
 }
 
