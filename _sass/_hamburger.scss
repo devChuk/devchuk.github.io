@@ -113,5 +113,8 @@ $hamburger-hover-filter    : opacity(50%) !default;
                 transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
             }
         }
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: $gray;
+        }
     }
 }
