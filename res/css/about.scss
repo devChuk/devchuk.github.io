@@ -1,0 +1,172 @@
+---
+---
+
+//
+// IMPORTS //
+//
+@import 'main';
+
+html{
+    color: $black;
+    background-color: $lightGray;
+}
+
+.border-top, .border-left, .border-right {
+    background-color: $black;
+}
+
+.fade-content {
+    border: 19px solid $black;
+}
+
+#intro-section {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    > div {
+        flex: 0 0 auto;
+        flex-basis: 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .short-desc {
+        padding-top: 19vw;
+
+        .wide-content-wrapper {
+            position: absolute;
+            right: 0;
+            left: 0;
+
+            > div {
+                width: 45%;
+
+                div:first-child {
+                    color: $red;
+                    font-size: 1.92vw;
+                    line-height: 2.24vw;
+                }
+
+                div:nth-child(2) {
+                    font-size: 3.4vw;
+                    line-height: 4.5vw;
+                }
+
+                div:last-child {
+                    margin-top: 8.9vw;
+                    font-size: 1.28vw;
+                }
+            }
+        }
+    }
+
+    .profile-photo {
+        img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 966px) {
+        flex-flow: row wrap;
+
+        > div {
+            flex: 0 0 auto;
+            flex-basis: 100%;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+        }
+
+        .short-desc {
+            padding-top: 0vw;
+
+            .wide-content-wrapper {
+                padding-top: 9vw;
+
+                > div {
+
+                div:first-child {
+                    display: none;
+                }
+
+                div:nth-child(2) {
+                    font-size: 4vw;
+                }
+
+                div:last-child {
+                    margin-top: 4vw;
+                }
+            }
+            }
+        }
+
+
+    }
+}
+
+.white-bg > .wide-content-wrapper {
+    padding-right: 41vw;
+
+    @media only screen and (min-width: 1300px) {
+        padding-right: 55vw;
+    }
+
+    div {
+        color: $red;
+        font-size: 4.1vw;
+        margin-top: 5.13vw;
+        margin-bottom: 5vw;
+
+        @media only screen and (min-width: 1300px) {
+            font-size: 52px;
+            margin-top: 66px;
+            margin-bottom: 66px;
+        }
+    }
+
+    div + p {
+        font-size: 2.05vw;
+        line-height: 2.99vw;
+        margin-bottom: 3vw;
+        @media only screen and (min-width: 1300px) {
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 39px;
+        }
+    }
+
+    p {
+        font-size: 1.54vw;
+        line-height: 2.99vw;
+        margin-bottom: 1.4vw;
+
+        @media only screen and (min-width: 1300px) {
+            font-size: 20px;
+            line-height: 38px;
+            margin-bottom: 18px;
+        }
+    }
+}
+
+.dark-gray-bg {
+    span:first-child {
+        font-family: 'Blender Pro';
+        font-size: 2.56vw;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    span:last-child {
+        float: right;
+
+        li {
+            display: inline-block;
+            margin-left: 2.56vw;
+
+            img {
+                width: 2.56vw;
+            }
+        }
+    }
+}
