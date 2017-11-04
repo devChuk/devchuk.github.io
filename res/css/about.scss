@@ -56,6 +56,9 @@ html{
                 div:last-child {
                     margin-top: 8.9vw;
                     font-size: 1.28vw;
+                    unicode-bidi: bidi-override;
+                    direction: rtl;
+                    float: left;
                 }
             }
         }
@@ -82,90 +85,88 @@ html{
             padding-top: 0vw;
 
             .wide-content-wrapper {
-                padding-top: 9vw;
+                padding-top: 11.5vw;
 
                 > div {
+                    div:first-child {
+                        display: none;
+                    }
 
-                div:first-child {
-                    display: none;
-                }
+                    div:nth-child(2) {
+                        font-size: 4vw;
+                    }
 
-                div:nth-child(2) {
-                    font-size: 4vw;
+                    div:last-child {
+                        display: none;
+                    }
                 }
-
-                div:last-child {
-                    margin-top: 4vw;
-                }
-            }
             }
         }
-
-
     }
 }
 
-.white-bg > .wide-content-wrapper {
-    padding-right: 41vw;
+.white-bg {
+    padding-top: 1px;
 
-    @media only screen and (min-width: 1300px) {
-        padding-right: 55vw;
-    }
+    .wide-content-wrapper > div {
+        width: 579px;
 
-    div {
-        color: $red;
-        font-size: 4.1vw;
-        margin-top: 5.13vw;
-        margin-bottom: 5vw;
+        @media only screen and (max-width: 780px) {
+            width: 100%;
+        }
 
-        @media only screen and (min-width: 1300px) {
+        div {
+            color: $red;
             font-size: 52px;
             margin-top: 66px;
             margin-bottom: 66px;
         }
-    }
 
-    div + p {
-        font-size: 2.05vw;
-        line-height: 2.99vw;
-        margin-bottom: 3vw;
-        @media only screen and (min-width: 1300px) {
+        div + p {
             font-size: 26px;
             line-height: 38px;
             margin-bottom: 39px;
         }
-    }
 
-    p {
-        font-size: 1.54vw;
-        line-height: 2.99vw;
-        margin-bottom: 1.4vw;
-
-        @media only screen and (min-width: 1300px) {
+        p {
             font-size: 20px;
-            line-height: 38px;
+            line-height: 32px;
             margin-bottom: 18px;
         }
     }
 }
 
 .dark-gray-bg {
-    span:first-child {
-        font-family: 'Blender Pro';
-        font-size: 2.56vw;
-        font-weight: 500;
-        text-transform: uppercase;
+
+    @media only screen and (max-width: 780px) {
+        padding-top: 5.35vw;
+        padding-bottom: 5.35vw;
     }
 
-    span:last-child {
-        float: right;
+    .wide-content-wrapper {
+        display: flex;
+        align-items: center;
 
-        li {
-            display: inline-block;
-            margin-left: 2.56vw;
+        span:first-child {
+            padding-top: 0px;
+        }
 
-            img {
-                width: 2.56vw;
+        span:last-child {
+            float: right;
+            width: 40%;
+
+            li {
+                float: right;
+                display: inline-block;
+                margin-left: 2.56vw;
+
+                img {
+                    width: 2.56vw;
+
+                    @media only screen and (max-width: 1000px) {
+                        width: 30px;
+                    }
+                }
             }
         }
     }

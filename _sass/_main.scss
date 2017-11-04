@@ -27,7 +27,7 @@ body {
     border: 19px solid #fff;
 }
 
-$header-gradient: 0.4; 
+$header-gradient: 0.5; 
 
 .header-background {
     position: fixed;
@@ -48,16 +48,20 @@ header {
     width: 100%;
     z-index: 100;
 
+    @media only screen and (max-width: 900px) {
+        top: 34px;
+    }
+
+    span > a {
+        color: $white;
+    }
+
     a {
         color: $white;
 
         @media only screen and (max-width: 900px) {
             color: $gray;
         }
-    }
-
-    @media only screen and (max-width: 900px) {
-        top: 34px;
     }
 
     > div > span:nth-child(2) {
