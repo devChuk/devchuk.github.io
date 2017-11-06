@@ -5,3 +5,154 @@
 // IMPORTS //
 //
 @import 'main';
+
+
+html {
+    color: $black;
+    background-color: $lightGray;
+}
+
+.border-top, .border-left, .border-right {
+    background-color: $black;
+}
+
+.fade-content {
+    border: 19px solid $black;
+}
+
+.light-gray-bg {
+
+    .thin-content-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+
+        $blog-border: 10px;
+
+        div {
+            
+        }
+
+        #blog-posts {
+            flex: 0 0 auto;
+            flex-basis: 66.66%;
+            width: 66.66%;
+            max-width: 66.66%;
+            padding-right: $blog-border;
+
+            ul {
+
+                li:first-child {
+                    img {
+                        width: 100%;
+                    }
+
+                    span {
+
+                        > div:first-child {
+                            font-size: 2.56vw;
+                            margin-top: 0.53vw;
+                        }
+
+                        > div:nth-child(2) {
+                            text-align: center;
+                            margin-top: 0.37vw;
+                        }
+
+                        > div:last-child {
+                            font-family: 'Lyon Text';
+                            font-size: 1.23vw;
+                            line-height: 1.39vw;
+                            margin-top: 1.28vw;
+                        }
+                    }
+                }
+
+                li:first-child + li {
+                    margin-top: 3vw;
+                }
+
+                li + li {
+                    display: flex;
+                    margin-top: 1.27vw;
+
+                    img {
+                        flex: 0 0 auto;
+                        height: 100%;
+                        width: 27%;
+                        max-width: 27%;
+                    }
+
+                    span {
+                        margin-left: 1.81vw;
+
+                        > div:first-child {
+                            margin-top: 0.7vw;
+                            font-size: 1.93vw;
+                            line-height: 2.14vw;
+                        }
+
+                        > div:nth-child(2) {
+                            margin-top: 0.5vw;
+                            
+                        }
+
+                        > div:last-child {
+                            font-family: 'Lyon Text';
+                            font-size: 1.23vw;
+                            line-height: 1.39vw;
+                            margin-top: 0.9vw;   
+                        }
+                    }
+                }
+            }
+
+            .action {
+                padding-top: 1.49vw;
+            }
+        }
+
+        #side-info {
+            flex: 0 0 auto;
+            flex-basis: 33.33%;
+            width: 33.33%;
+            max-width: 33.33%;
+            padding-left: $blog-border;
+
+            > div {
+                padding: 1.6vw 2.51vw 2.35vw;
+                margin-bottom: 2.13vw;
+                background-color: $white;
+            }
+
+            > div:first-child {
+
+                > div:first-child {
+                    font-weight: 600;
+                    font-size: 2vw;
+                }
+
+                > div:last-child {
+                    font-size: 1.23vw;
+                    line-height: 1.39vw;
+                    margin-top: 1.55vw;
+                }
+            }
+
+            > div:last-child {
+
+                > div:first-child {
+                    font-size: 1.23vw;
+                    line-height: 1.39vw;
+                }
+
+                > div:last-child {
+                    // font-size: 1.23vw;
+                    // line-height: 1.39vw;
+                    // margin-top: 1.55vw;
+                }
+
+                
+            }
+        }
+    }
+}
