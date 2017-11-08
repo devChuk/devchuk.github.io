@@ -76,6 +76,12 @@
             width: 66%;
             font-size: 1.55vw;
             line-height: 1.71vw;
+
+            @media only screen and (max-width: 1609px) {
+                margin-left: 15px;
+                font-size: 25px;
+                line-height: 27.5px;
+            }
         }
     }
 
@@ -91,10 +97,10 @@
 
         #blog-title {
             font-size: 1.9vw;
-        }
 
-        .featured-post {
-            margin-right: 0.29vw;
+            @media only screen and (min-width: 1609px) {
+                font-size: 30px;
+            }
         }
 
         .side-posts {
@@ -130,7 +136,6 @@
 
             @media only screen and (max-width: 480px) {
                 font-size: 22px;
-                line-height: 22px;
             }
         }
 

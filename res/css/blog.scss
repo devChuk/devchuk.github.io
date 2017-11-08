@@ -28,10 +28,6 @@ html {
 
         $blog-border: 10px;
 
-        div {
-            
-        }
-
         #blog-posts {
             flex: 0 0 auto;
             flex-basis: 66.66%;
@@ -39,56 +35,178 @@ html {
             max-width: 66.66%;
             padding-right: $blog-border;
 
-            ul {
+            li:first-child {
+                img {
+                    width: 100%;
+                }
 
-                li:first-child {
-                    img {
-                        width: 100%;
+                span {
+
+                    > div:first-child {
+                        font-size: 2.56vw;
+                        margin-top: 10px;
                     }
+
+                    > div:nth-child(2) {
+                        margin-top: 0.66vw;
+                    }
+
+                    > div:last-child {
+                        font-family: 'Lyon Text';
+                        font-size: 1.23vw;
+                        color: $gray;
+                        line-height: 1.39vw;
+                        margin-top: 1.28vw;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            li:first-child + li {
+                margin-top: 3vw;
+            }
+
+            li + li {
+                display: flex;
+                margin-top: 1.27vw;
+
+                img {
+                    flex: 0 0 auto;
+                    height: 100%;
+                    width: 27%;
+                    max-width: 27%;
+                }
+
+                span {
+                    margin-left: 1.81vw;
+
+                    > div:first-child {
+                        margin-top: 0.7vw;
+                        font-size: 1.93vw;
+                        line-height: 2.14vw;
+                    }
+
+                    > div:nth-child(2) {
+                        margin-top: 0.5vw;
+                    }
+
+                    > div:last-child {
+                        font-family: 'Lyon Text';
+                        font-size: 1.23vw;
+                        color: $gray;
+                        line-height: 1.39vw;
+                        margin-top: 0.9vw;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 1609px) {
+                li:first-child {
 
                     span {
 
                         > div:first-child {
-                            font-size: 2.56vw;
-                            margin-top: 0.53vw;
+                            font-size: 41px;
+                            margin-top: 9px;
                         }
 
                         > div:nth-child(2) {
-                            text-align: center;
-                            margin-top: 0.37vw;
+                            margin-top: 10px;
                         }
 
                         > div:last-child {
-                            font-family: 'Lyon Text';
-                            font-size: 1.23vw;
-                            line-height: 1.39vw;
-                            margin-top: 1.28vw;
+                            margin-top: 21px;
+                            font-size: 20px;
+                            line-height: 22px;
                         }
                     }
                 }
 
                 li:first-child + li {
-                    margin-top: 3vw;
+                    margin-top: 49px;
                 }
 
                 li + li {
                     display: flex;
-                    margin-top: 1.27vw;
-
-                    img {
-                        flex: 0 0 auto;
-                        height: 100%;
-                        width: 27%;
-                        max-width: 27%;
-                    }
+                    margin-top: 25px;
 
                     span {
-                        margin-left: 1.81vw;
+                        margin-left: 29px;
 
                         > div:first-child {
-                            margin-top: 0.7vw;
-                            font-size: 1.93vw;
-                            line-height: 2.14vw;
+                            margin-top: 11px;
+                            font-size: 31px;
+                            line-height: 34px;
+                        }
+
+                        > div:nth-child(2) {
+                            margin-top: 8px;
+                        }
+
+                        > div:last-child {
+                            margin-top: 14.5px;
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1200px) {
+                flex: 0 0 auto;
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 100%;
+                padding-right: 0;
+
+                li:first-child {
+
+                    span {
+
+                        > div:first-child {
+                            font-size: 3.86vw;
+                            @media only screen and (max-width: 780px) {
+                                font-size: 22px;
+                                line-height: 26px;
+                            }
+                        }
+
+                        > div:last-child {
+                            font-size: 18px;
+                            line-height: 20px;
+                            @media only screen and (max-width: 695px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                li + li {
+
+                    span {
+
+                        > div:first-child {
+                            font-size: 2.32vw;
+                            line-height: 2.57vw;
+
+                            @media only screen and (max-width: 780px) {
+                                font-size: 22px;
+                                line-height: 26px;
+                            }
+
+                            @media only screen and (max-width: 695px) {
+                                font-size: 18px;
+                                line-height: 21px;
+                            }
                         }
 
                         > div:nth-child(2) {
@@ -97,17 +215,16 @@ html {
                         }
 
                         > div:last-child {
-                            font-family: 'Lyon Text';
-                            font-size: 1.23vw;
-                            line-height: 1.39vw;
-                            margin-top: 0.9vw;   
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin-top: 0.4vw;
+
+                            @media only screen and (max-width: 695px) {
+                                display: none;
+                            }
                         }
                     }
                 }
-            }
-
-            .action {
-                padding-top: 1.49vw;
             }
         }
 
@@ -124,6 +241,11 @@ html {
                 background-color: $white;
             }
 
+            .lyon {
+                font-size: 1.23vw;
+                line-height: 1.39vw;
+            }
+
             > div:first-child {
 
                 > div:first-child {
@@ -132,8 +254,6 @@ html {
                 }
 
                 > div:last-child {
-                    font-size: 1.23vw;
-                    line-height: 1.39vw;
                     margin-top: 1.55vw;
                 }
             }
@@ -141,17 +261,61 @@ html {
             > div:last-child {
 
                 > div:first-child {
-                    font-size: 1.23vw;
-                    line-height: 1.39vw;
+                    margin-top: 0.4vw;
                 }
 
                 > div:last-child {
-                    // font-size: 1.23vw;
-                    // line-height: 1.39vw;
-                    // margin-top: 1.55vw;
+                    margin-top: 3vw;
+                }
+            }
+
+            @media only screen and (min-width: 1609px) {
+                > div {
+                    padding: 26px 40px 38px;
+                    margin-bottom: 34px;
                 }
 
-                
+                .lyon {
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+
+                > div:first-child {
+
+                    > div:first-child {
+                        font-size: 32px;
+                    }
+
+                    > div:last-child {
+                        margin-top: 25px;
+                    }
+                }
+
+                > div:last-child {
+
+                    > div:first-child {
+                        margin-top: 6px;
+                    }
+                    > div:last-child {
+                        margin-top: 48px;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1200px) {
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 100%;
+                padding: 32px 0px 0px;
+
+                .lyon {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+
+                > div:first-child > div:first-child {
+                    font-size: 19px;
+                }
             }
         }
     }

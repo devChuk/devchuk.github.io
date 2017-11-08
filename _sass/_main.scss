@@ -156,7 +156,7 @@ section {
 }
 
 a {
-    color: $gray;
+    color: $white;
     text-decoration: none;
 }
 
@@ -172,11 +172,12 @@ a {
 .thin-content-wrapper {
     margin: 0 auto;
     width: 74.6vw;
+    max-width: 1200px;
     overflow: hidden;
 
     @media only screen and (max-width: 780px) {
         width: 80vw;
-    }   
+    }
 }
 
 .transparent-bg {
@@ -210,8 +211,27 @@ a {
     font-weight: 700;
     text-transform: uppercase;
 
+    @media only screen and (min-width: 1600px) {
+        font-size: 21px;
+    }
+
     @media only screen and (max-width: 966px) {
         padding-top: 18px;
         font-size: 18px;
     }
+}
+
+.date {
+    color: $gray;
+    font-family: 'Blender Pro';
+    font-size: 1.28vw;
+    font-weight: 700;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+.lyon {
+    font-family: 'Lyon Text';
 }
