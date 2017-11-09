@@ -1,7 +1,7 @@
 <div class="header-background"></div>
 <header>
     <div class="wide-content-wrapper">
-        <span><a href="/devChukV2">Brian Chuk.</a></span>
+        <span><a href="/devChukV2/">Brian Chuk.</a></span>
         <span>
             <button id="menu-icon" class="hamburger hamburger--squeeze" type="button">
                 <span class="hamburger-box">
@@ -19,6 +19,8 @@
         </span>
     </div>
 </header>
-<span class="border-top"></span>
-<span class="border-left"></span>
-<span class="border-right"></span>
+{% if include.hideBorderHack == null %}
+    <span class="border-top"></span>
+    <span class="border-left"></span>
+    <span class="border-right"></span>
+{% endif %}

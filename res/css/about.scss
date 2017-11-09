@@ -106,8 +106,24 @@ html {
     }
 }
 
+aside {
+    color: $gray;
+    font-size: 10px;
+    transform: none;
+    position: static;
+
+    @media only screen and (min-width: 967px) {
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        position: absolute;
+        left: 4vw;
+        top: 46vw;
+        font-size: 0.9vw;
+    }
+}
+
 .white-bg {
-    padding-top: 1px;
+    padding-top: 6.5vw;
 
     .wide-content-wrapper > div {
         width: 579px;
@@ -119,7 +135,6 @@ html {
         div {
             color: $red;
             font-size: 52px;
-            margin-top: 66px;
             margin-bottom: 66px;
         }
 
@@ -154,7 +169,7 @@ html {
 
         span:last-child {
             float: right;
-            width: 40%;
+            width: 68%;
 
             li {
                 float: right;

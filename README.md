@@ -20,3 +20,8 @@ earcut.js
 stackoverflow
 http://youmightnotneedjquery.com
 https://jonsuh.com/hamburgers/
+
+
+
+bundle exec jekyll serve --watch
+bundle exec guard
