@@ -11,17 +11,3 @@ if (window.innerWidth > 991) {
     document.body.appendChild(stargazer);
 }
 else {animated = false;}
-
-// var headerHome = document.getElementById('header-home');
-// var fullName = document.getElementById('full-name-title');
-// function animHeader () {
-//     scroll = wndow.scrollY;
-//     if (window.scrollY < 100) {
-
-//     } else {
-//         // if not already set
-
-//     }
-// }
-
-// window.addEventListener('scroll', animHeader, false);

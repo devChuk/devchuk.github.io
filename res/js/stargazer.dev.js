@@ -1061,9 +1061,9 @@ var render = function () {
     }
 
     var timeElapsed = Date.now() - startTime;
-    if (timeElapsed > 2000 && _stage == STAGE.SPHERE)
+    if (timeElapsed > 8000 && _stage == STAGE.SPHERE)
         startTransition(STAGE.STARFIELD);
-    else if (timeElapsed > 7000 && _stage == STAGE.STARFIELD)      //8000, 18000
+    else if (timeElapsed > 18000 && _stage == STAGE.STARFIELD)      //8000, 18000
         startTransition(STAGE.STAG);
     renderer.render(scene, camera);
 };
@@ -1071,8 +1071,15 @@ var render = function () {
 ////////////////////////////////////////RUN/////////////////////////
 
 THREE.DefaultLoadingManager.onLoad = function () {
-    startTime = Date.parse(new Date());
-    render();
+    setTimeout(function () {
+        startTime = Date.parse(new Date());
+        render();
+        fadeIn(canvas, 1000);
+    }, 1000);
 }
+
+THREE.DefaultLoadingManager.onError = function (url) {
+    console.log('There was an error loading ' + url);
+};
 
 setup();

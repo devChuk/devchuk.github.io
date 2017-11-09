@@ -1,4 +1,16 @@
-fadeIn(document.getElementsByClassName('fade-content')[0],1000)
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+ready(function () {
+    setTimeout(function () {
+        fadeIn(document.getElementsByClassName('fade-content')[0], 500);
+    }, 400);
+});
 
 // higher speed is slower fadeIn
 function fadeIn(el, speed) {
