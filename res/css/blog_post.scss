@@ -1,0 +1,145 @@
+---
+---
+
+//
+// IMPORTS //
+//
+@import 'main';
+
+
+html {
+    color: $black;
+    background-color: $white;
+}
+
+.border-top, .border-left, .border-right {
+    background-color: $black;
+}
+
+.fade-content {
+    border: 19px solid $black;
+}
+
+.white-bg {
+    padding-bottom: 1.35vw;
+}
+
+#title {
+    font-size: 4.28vw;
+    line-height: 4.75vw;
+    margin-top: -0.21em;
+    padding-bottom: 0.5em;
+
+    @media only screen and (max-width: 932px) {
+        font-size: 40px;
+        line-height: 45px;
+
+
+    }
+}
+
+.page-title aside, section:first-child {
+    padding-top: 10.5vw;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    aside {
+        display: none;
+    }
+}
+
+.details {
+    padding-bottom: 0.8em;
+
+    span:last-child {
+        float: right;
+    }
+}
+
+.details:last-of-type {
+    padding-bottom: 0;
+    padding-top: 5.35vw;
+    color: $black;
+}
+
+#content {
+    font-family: 'Lyon Text';
+    word-wrap: break-word;
+
+    img {
+        width: 100%;
+        padding-bottom: 5vw;
+    }
+
+    img + img {
+        padding-top: 5vw;
+    }
+
+
+    p:first-of-type {
+        font-size: 1.9vw;
+        line-height: 2.7vw;
+
+        @media only screen and (max-width: 1127px) {
+            font-size: 21px;
+            line-height: 1.7;
+        }
+    }
+
+    p {
+        padding-bottom: 2.46vw;
+        font-size: 1.6vw;
+        line-height: 2.25vw;
+
+        @media only screen and (max-width: 1127px) {
+            padding-bottom: 2.46vw;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+    }
+}
+
+.thin-content-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    #blog-posts {
+        flex: 0 0 auto;
+        flex-basis: 66.66%;
+        width: 66.66%;
+        max-width: 66.66%;
+        padding-right: 10px;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        article {
+            flex: 0 0 auto;
+            flex-basis: 50%;
+            width: 50%;
+            max-width: 50%;
+            padding-right: 10px;
+            padding-bottom: 35px;
+
+            img {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+
+            div {
+                text-align: center;
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+    }
+
+    #side-info {
+        flex: 0 0 auto;
+        flex-basis: 33.33%;
+        width: 33.33%;
+        max-width: 33.33%;
+        padding-left: 10px;
+    }
+}

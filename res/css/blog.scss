@@ -20,27 +20,6 @@ html {
     border: 19px solid $black;
 }
 
-.page-title {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    margin-top: 19px;
-
-    aside {
-        color: $red;
-        padding-top: 5.35vw;
-        font-size: 30px;
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-        margin-top: -0.3em;
-    }
-
-    @media only screen and (max-width: 780px) {
-        display: none;
-    }
-
-}
-
 .light-gray-bg {
 
     .thin-content-wrapper {

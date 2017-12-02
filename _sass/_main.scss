@@ -68,6 +68,23 @@ header {
     > div > span:nth-child(2) {
         float: right;
 
+        #exit-link {
+            display: none;
+
+            @media only screen and (max-width: 900px) {
+                display: inline-block;
+                position: fixed;
+                right: 9vw;
+                margin-right: 30px;
+                z-index: 20;
+                color: white;
+                
+                a {
+                    white-space: pre;
+                }
+            }
+        }
+
         button {
             display: none;
 
@@ -116,6 +133,10 @@ header {
     }
 }
 
+.gray {
+    color: $gray !important;
+}
+
 .border-top, .border-left, .border-right {
     position: absolute;
     top: 0;
@@ -161,22 +182,30 @@ a {
     text-decoration: none;
 }
 
-.wide-content-wrapper {
+.wide-content-wrapper,
+.thin-content-wrapper,
+.article-content-wrapper {
     margin: 0 auto;
-    width: 87vw;
 
     @media only screen and (max-width: 780px) {
-        width: 80vw;
+        width: 80vw !important;
     }
 }
 
+.wide-content-wrapper {
+    width: 87vw;
+}
+
 .thin-content-wrapper {
-    margin: 0 auto;
     width: 74.6vw;
     max-width: 1200px;
     overflow: hidden;
+}
 
-    @media only screen and (max-width: 780px) {
+.article-content-wrapper {
+    width: 943px;
+
+    @media only screen and (max-width: 1300px) {
         width: 80vw;
     }
 }
@@ -222,11 +251,34 @@ a {
     }
 }
 
+.page-title {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    margin-top: 19px;
+    pointer-events: none;
+
+    aside {
+        color: $red;
+        padding-top: 5.35vw;
+        font-size: 30px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        margin-top: -0.3em;
+    }
+
+    @media only screen and (max-width: 780px) {
+        display: none;
+    }
+
+}
+
 .date {
     color: $gray;
     font-family: 'Blender Pro';
     font-size: 1.28vw;
     font-weight: 700;
+    text-transform: uppercase;
 
     @media only screen and (max-width: 1200px) {
         font-size: 16px;

@@ -1,20 +1,27 @@
 <div class="header-background"></div>
 <header>
     <div class="wide-content-wrapper">
-        <span><a href="/devChukV2/">Brian Chuk.</a></span>
+        <span><a href="/">Brian Chuk.</a></span>
         <span>
-            <button id="menu-icon" class="hamburger hamburger--squeeze" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
+            <span>
+                {% if include.exitText and include.exitLink %}
+                <span id="exit-link">
+                    <a href="{{ include.exitLink }}">{{ include.exitText }}   </a><span style="color:#F4F4F4;">|</span>
                 </span>
-            </button>
+                {% endif %}
+                <button id="menu-icon" class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </span>
         </span>
         <span id="navigation">
             <ul>
-                <li><a href="/devChukV2/about">About</a></li>
-                <li><a href="/devChukV2/blog">Writing</a></li>
-                <li><a href="/devChukV2/projects">Portfolio</a></li>
-                <li><a href="/devChukV2/contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Writing</a></li>
+                <li><a href="/projects">Portfolio</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </span>
     </div>

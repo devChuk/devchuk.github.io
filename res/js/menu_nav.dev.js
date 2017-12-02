@@ -52,6 +52,9 @@ function fadeOut(el, speed) {
 }
 
 function toggleClass(el, className) {
+    if (!el) {
+        return;
+    }
     if (el.classList) {
         el.classList.toggle(className);
     } else {
@@ -67,13 +70,26 @@ function toggleClass(el, className) {
     }
 }
 
+function removeClass(el, className) {
+    if (!el) {
+        return;
+    }
+    if (el.classList) {
+        el.classList.remove('is-active');
+    } else {
+        el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+}
+
 var showNav = false;
 var menuButton = document.getElementById('menu-icon');
+var exitLink = document.getElementById('exit-link');
 var navigation = document.getElementById('navigation');
 var listItems = navigation.children[0].children;
 
 menuButton.onclick = function () {
     toggleClass(menuButton, 'is-active');
+    toggleClass(exitLink, 'gray');
     
     if (showNav === false) {
         navigation.style.display = 'block';
@@ -115,11 +131,8 @@ function displayOnDesktop () {
             listItems[i].style.opacity = 0;
         }
 
-        if (menuButton.classList) {
-            menuButton.classList.remove('is-active');
-        } else {
-            menuButton.className = menuButton.className.replace(new RegExp('(^|\\b)' + 'is-active'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        }
+        removeClass(menuButton, 'is-active');
+        removeClass(exitLink, 'gray');
     }
 } 
 

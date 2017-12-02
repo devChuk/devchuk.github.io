@@ -5,10 +5,14 @@
 <html lang="en">
     <head>
         {% include head.html %}
-        <link rel="stylesheet" href="/devChukV2/res/css/blog.css"/>
+        <link rel="stylesheet" href="/res/css/blog.css"/>
     </head>
     <body>
-        {% include header.html hideBorderHack="true"%}
+        {% include header.html 
+            hideBorderHack="true"
+            exitText="Close Article"
+            exitLink="/blog"
+        %}
         <div class="page-title">
             <div class="wide-content-wrapper">
                 <aside>NOTEBOOK</aside>
@@ -20,7 +24,7 @@
                     <div id="blog-posts">
                         <ul>
                             <li>
-                                <img src="/devChukV2/res/img/Flight.png">
+                                <img src="/res/img/Flight.png">
                                 <span>
                                     <div>How to Travel the World as a Student Dev</div>
                                     <div class="date">08/02/2017</div>
@@ -28,7 +32,7 @@
                                 </span>
                             </li>
                             <li>
-                                <img src="/devChukV2/res/img/Flight.png">
+                                <img src="/res/img/Flight.png">
                                 <span>
                                     <div>Where the Pigeons Sleep</div>
                                     <div class="date">07/28/2017</div>
@@ -36,7 +40,7 @@
                                 </span>
                             </li>
                             <li>
-                                <img src="/devChukV2/res/img/Flight.png">
+                                <img src="/res/img/Flight.png">
                                 <span>
                                     <div>Case Study: Drawing a Deer in the Stars</div>
                                     <div class="date">07/21/2017</div>
