@@ -69,7 +69,7 @@ html {
 
     img {
         width: 100%;
-        padding-bottom: 5vw;
+        padding-bottom: 30px;
     }
 
     img + img {
@@ -78,24 +78,23 @@ html {
 
 
     p:first-of-type {
-        font-size: 1.9vw;
-        line-height: 2.7vw;
+        font-size: 30px;
+        line-height: 1.5em;
 
-        @media only screen and (max-width: 1127px) {
-            font-size: 21px;
-            line-height: 1.7;
+        @media only screen and (max-width: 932px) {
+            font-size: 25px;
+            // line-height: 1.7;
         }
     }
 
     p {
         padding-bottom: 2.46vw;
-        font-size: 1.6vw;
-        line-height: 2.25vw;
+        font-size: 22px;
+        line-height: 1.5em;
 
-        @media only screen and (max-width: 1127px) {
-            padding-bottom: 2.46vw;
-            font-size: 17px;
-            line-height: 1.7;
+        @media only screen and (max-width: 932px) {
+            padding-bottom: 1.3em;
+            font-size: 20px;
         }
     }
 }
@@ -114,24 +113,54 @@ html {
         display: flex;
         flex-flow: row wrap;
 
+        article:first-of-type, article:first-of-type + article {
+            margin-bottom: 40px;
+        }
+
         article {
             flex: 0 0 auto;
             flex-basis: 50%;
             width: 50%;
             max-width: 50%;
             padding-right: 10px;
-            padding-bottom: 35px;
+            font-size: 22px;
 
-            img {
-                width: 100%;
-                margin-bottom: 24px;
+            figure {
+                overflow: hidden;
+                margin-bottom: 10px;
+                
+                img {
+                    width: 100%;
+                    margin: -11% 0;
+                }
             }
 
             div {
+                padding-left: 10%;
+                padding-right: 10%;
                 text-align: center;
-                font-size: 30px;
-                line-height: 35px;
+                line-height: 1.2em;
+                min-height: 3.74vw;
             }
+
+            @media only screen and (max-width: 720px) {
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 100%;
+                font-size: 30px;
+                margin-bottom: 20px;
+
+                @media only screen and (max-width: 480px) {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            flex-basis: 100%;
+            width: 100%;
+            max-width: 100%;
+            padding-right: 0;
         }
     }
 
@@ -141,5 +170,67 @@ html {
         width: 33.33%;
         max-width: 33.33%;
         padding-left: 10px;
+        color: white;
+
+        .lyon {
+            font-size: 1.23vw;
+            line-height: 1.5em;
+        }
+
+        > div {
+            padding: 1.6vw 2.51vw 2.35vw;
+            margin-bottom: 2.13vw;
+            background-color: $black;
+
+            > div:first-child {
+                margin-top: 0.4vw;
+            }
+            > div:last-child {
+                margin-top: 3vw;
+            }
+
+            @media only screen and (min-width: 1609px) {
+                padding: 26px 40px 38px;
+                margin-bottom: 34px;
+
+                > div:first-child {
+                    margin-top: 6px;
+                    font-size: 20px;
+                    line-height: 22px;
+
+                }
+                > div:last-child {
+                    margin-top: 48px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            flex-basis: 100%;
+            width: 100%;
+            max-width: 100%;
+            padding-left: 0;
+            padding-top: 5.35vw;
+            
+            .lyon {
+                font-size: 22px;
+            }
+        }
+
+        @media only screen and (max-width: 780px) {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 781px) {
+    #mailing-list-cta {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    section.light-gray-bg {
+        padding-bottom: 5.35vw;
     }
 }

@@ -203,9 +203,9 @@ a {
 }
 
 .article-content-wrapper {
-    width: 943px;
+    width: 780px;
 
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (max-width: 1000px) {
         width: 80vw;
     }
 }
