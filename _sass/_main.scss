@@ -124,8 +124,8 @@ header {
             li {
                 display: block;
                 width: 100vw;
-                height: 25vh;
-                line-height: 25vh;
+                height: 33vh;
+                line-height: 33vh;
                 font-size: 8vmin;
                 opacity: 0;
             }
@@ -287,4 +287,28 @@ a {
 
 .lyon {
     font-family: 'Lyon Text';
+}
+
+#content {
+    word-wrap: break-word;
+
+    img {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    img + img {
+        padding-top: 5vw;
+    }
+
+    p {
+        padding-bottom: 2.46vw;
+        font-size: 22px;
+        line-height: 1.5em;
+
+        @media only screen and (max-width: 932px) {
+            padding-bottom: 1.3em;
+            font-size: 20px;
+        }
+    }
 }

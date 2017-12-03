@@ -1,0 +1,103 @@
+---
+---
+
+//
+// IMPORTS //
+//
+@import 'main';
+
+
+html {
+    color: $white;
+    background-color: $darkGray;
+}
+
+.border-top, .border-left, .border-right {
+    background-color: $white;
+}
+
+.fade-content {
+    border: 19px solid $white;
+}
+
+.white-bg {
+    padding-bottom: 1.35vw;
+}
+
+#title {
+    font-size: 4.28vw;
+    line-height: 4.75vw;
+    margin-top: -0.21em;
+    padding-bottom: 0.5em;
+
+    @media only screen and (max-width: 932px) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+.page-title aside, section:first-child {
+    padding-top: 10.5vw;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    aside {
+        display: none;
+    }
+}
+
+.navigation {
+    padding-top: 5.35vw;
+    color: $white;
+
+    span:last-child {
+        float: right;
+    }
+}
+
+.article-content-wrapper {
+    p:first-of-type {
+        font-size: 30px;
+        line-height: 1.5em;
+        padding-bottom: 1.5em;
+
+        @media only screen and (max-width: 932px) {
+            font-size: 25px;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-flow: row wrap;
+        padding-bottom: 2.5em;
+
+
+        > div {
+            flex: 0 0 auto;
+            flex-basis: 25%;
+            width: 25%;
+            max-width: 25%;
+
+            label {
+                font-family: "Blender Pro";
+                text-transform: uppercase;
+                font-size: 21px;
+                line-height: 25px;
+            }
+
+            > div {
+                max-width: 153px;
+                font-size: 16px;
+                line-height: 23px;   
+            }
+
+            @media only screen and (max-width: 530px) {
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 100%;
+                padding-bottom: 2em;
+            }
+        }
+    }
+}
