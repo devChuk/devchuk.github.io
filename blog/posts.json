@@ -1,0 +1,24 @@
+---
+---
+
+{
+    "posts": [
+        {% for post in site.posts %}
+            {% if forloop.last == true %}
+                {
+                    "title": "{{ post.title }}",
+                    "date": "{{ post.date | date: "%Y-%m-%-d" }}",
+                    "url": "{{ post.url }}",
+                    "thumbnail": "{{ post.thumbnail }}"
+                }
+            {% else %}
+                {
+                    "title": "{{ post.title }}",
+                    "date": "{{ post.date | date: "%Y-%m-%-d" }}",
+                    "url": "{{ post.url }}",
+                    "thumbnail": "{{ post.thumbnail }}"
+                },
+            {% endif %}
+        {% endfor %}
+    ]
+}

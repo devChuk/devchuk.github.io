@@ -65,37 +65,29 @@ html {
 
 #content {
     font-family: 'Lyon Text';
-    word-wrap: break-word;
 
-    img {
-        width: 100%;
-        padding-bottom: 30px;
-    }
-
-    img + img {
-        padding-top: 5vw;
-    }
-
-
-    p:first-of-type {
+    > p:first-of-type {
         font-size: 30px;
         line-height: 1.5em;
 
         @media only screen and (max-width: 932px) {
             font-size: 25px;
-            // line-height: 1.7;
         }
     }
 
-    p {
-        padding-bottom: 2.46vw;
-        font-size: 22px;
-        line-height: 1.5em;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Circular';
+    }
 
-        @media only screen and (max-width: 932px) {
-            padding-bottom: 1.3em;
-            font-size: 20px;
-        }
+    h1 { font-size: 2.3em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.47em; }
+    h4 { font-size: 1.42em; }
+    h5 { font-size: 1.13em; }
+    h6 { font-size: 1.05em; }
+
+    blockquote {
+        font-family: 'Lyon Display';
     }
 }
 
@@ -112,6 +104,10 @@ html {
 
         display: flex;
         flex-flow: row wrap;
+
+        a {
+            color: $black;
+        }
 
         article:first-of-type, article:first-of-type + article {
             margin-bottom: 40px;

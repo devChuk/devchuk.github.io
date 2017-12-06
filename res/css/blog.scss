@@ -42,7 +42,8 @@ html {
 
                 span {
 
-                    > div:first-child {
+                    > a:first-child {
+                        color: $black;
                         font-size: 2.56vw;
                         margin-top: 10px;
                     }
@@ -74,20 +75,25 @@ html {
                 display: flex;
                 margin-top: 1.27vw;
 
-                img {
+                a {
                     flex: 0 0 auto;
                     height: 100%;
                     width: 27%;
                     max-width: 27%;
+
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 span {
                     margin-left: 1.81vw;
 
-                    > div:first-child {
+                    > a:first-child {
                         margin-top: 0.7vw;
                         font-size: 1.93vw;
                         line-height: 2.14vw;
+                        color: $black;
                     }
 
                     > div:nth-child(2) {
@@ -114,7 +120,7 @@ html {
 
                     span {
 
-                        > div:first-child {
+                        > a:first-child {
                             font-size: 41px;
                             margin-top: 9px;
                         }
@@ -142,7 +148,7 @@ html {
                     span {
                         margin-left: 29px;
 
-                        > div:first-child {
+                        > a:first-child {
                             margin-top: 11px;
                             font-size: 31px;
                             line-height: 34px;
@@ -172,7 +178,7 @@ html {
 
                     span {
 
-                        > div:first-child {
+                        > a:first-child {
                             font-size: 3.86vw;
                             @media only screen and (max-width: 780px) {
                                 font-size: 22px;
@@ -194,7 +200,7 @@ html {
 
                     span {
 
-                        > div:first-child {
+                        > a:first-child {
                             font-size: 2.32vw;
                             line-height: 2.57vw;
 

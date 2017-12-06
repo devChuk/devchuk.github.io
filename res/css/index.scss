@@ -52,15 +52,20 @@
 #blog-posts {
     display: flex;
 
-    .featured-post > img {
+    .featured-post > a, .featured-post > a > img {
         width: 100%;
+    }
+
+    #blog-title > a {
+        color: $black;
     }
 
     .action a {
         color: $black;
     }
 
-    article {
+    article > a {
+        color: $black;
         display: flex;
         align-items: center;
 
@@ -97,6 +102,7 @@
 
         #blog-title {
             font-size: 1.9vw;
+            padding-bottom: 10px;
 
             @media only screen and (min-width: 1609px) {
                 font-size: 30px;

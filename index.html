@@ -36,23 +36,23 @@
                     <div class="section-title">WRITING</div>
                     <div id="blog-posts">
                         <div class="featured-post">  
-                            <img src="./res/img/Flight.png">
+                            <a href="{{ site.posts.first.url }}"><img src="{{ site.posts.first.thumbnail }}"></a>
                         </div>
                         <div class="side-posts">
-                            <article>
-                                <img src="./res/img/Flight.png">
-                                <span>Where the Pigeons Sleep</span>
-                            </article>
-                            <article>
-                                <img src="./res/img/Flight.png">
-                                <span>Case Study: Drawing a Deer in the Stars</span>
-                            </article>
-                            <article>
-                                <img src="./res/img/Flight.png">
-                                <span>The Notebook is now LIVE</span>
-                            </article>
+                            {% for post in site.posts %}
+                                {% if forloop.first == true %}
+                                    {% continue %}
+                                {% elsif forloop.index0 < 4 %}
+                                    <article>
+                                        <a href="{{ post.url }}"><img src="{{ post.thumbnail }}">
+                                        <span>{{ post.title }}</span></a>
+                                    </article>
+                                {% else %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
                         </div>
-                        <span id="blog-title" class="featured-post">How to Travel the World as a Student Dev</span>
+                        <span id="blog-title" class="featured-post"><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></span>
                         <span class="action side-posts"><a href="/blog">READ MORE ESSAYS</a></span>
                     </div>
                 </div>

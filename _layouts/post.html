@@ -1,0 +1,60 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        <link rel="stylesheet" href="/res/css/blog_post.css"/>
+        <title>{{ page.title }} | Brian Chuk</title>
+    </head>
+    <body>
+        {% include header.html 
+            hideBorderHack="true"
+            exitText="Close Article"
+            exitLink="/blog"
+        %}
+        <div class="page-title">
+            <div class="wide-content-wrapper">
+                <aside>NOTEBOOK</aside>
+            </div>
+        </div>
+        <div class="fade-content">
+            <section class="white-bg">
+                <div class="article-content-wrapper">
+                    <div id="title">{{ page.title }}</div>
+                    <div class="details date">
+                        <span>{{ page.desc }}</span>
+                        <span>{{ page.date | date: "%m/%-d/%Y" }}</span>
+                    </div>
+                    <div id="content">
+                        {{ content }}
+                    </div>
+                    <div class="details date">
+                        <span>PREVIOUS POST</span>
+                        <span>NEXT POST</span>
+                    </div>
+                </div>
+            </section>
+            <section class="light-gray-bg">
+                <div class="thin-content-wrapper">
+                    <div class="section-title">READ MORE</div>
+                    <div id="blog-posts"></div>
+                    <div id="side-info">
+                        <div>
+                            <div class="lyon">
+                                Want updates of new essays and what I'm working on?
+                                <br><br>
+                                Join my private mailing list.
+                            </div>
+                            <div class="action">BECOME A FRIEND</div>
+                        </div>
+                    </div>
+                    <div id="mailing-list-cta" class="action">JOIN MY PRIVATE MAILING LIST</div>
+                </div>
+            </section>
+        </div>
+        <script src="/res/js/get_post_suggestions.js"></script>
+        {% include body.html %}
+    </body>
+</html>

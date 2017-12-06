@@ -17,7 +17,16 @@
         <div class="fade-content">
             <section class="dark-gray-bg">
                 <div class="thin-content-wrapper">
-                    <figure class="full-img">
+                    {% for post in site.projects %}
+                        <figure class="{{ post.thumbnail_size }}">
+                            <img src="{{ post.thumbnail }}"></img>
+                            <figcaption>
+                                <h2>{{ post.title }}</h2>
+                                <a href="{{ post.ur }}"></a>
+                            </figcaption>
+                        </figure>
+                    {% endfor %}
+                    <!-- <figure class="full-img">
                         <img src="/res/img/Flight.png"></img>
                         <figcaption>
                             <h2>The Battle of IvenChuk</h2>
@@ -51,7 +60,7 @@
                             <h2>Parrot</h2>
                             <a href="http://www.google.com"></a>
                         </figcaption>
-                    </figure>
+                    </figure> -->
                     <figure class="half-img">
                         <img src="/res/img/Flight.png"></img>
                         <figcaption>

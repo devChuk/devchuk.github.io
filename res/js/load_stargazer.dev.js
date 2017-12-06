@@ -1,3 +1,5 @@
+// used to determine whether or not to load the stargazer javascript animation
+
 var mobile = false;
     if (window.innerWidth <= 966) {
         mobile = true;

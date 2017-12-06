@@ -1,3 +1,5 @@
+// basic navigation & menu button animations
+
 function ready(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
         fn();

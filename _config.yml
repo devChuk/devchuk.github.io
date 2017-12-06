@@ -1,5 +1,8 @@
 name: Brian Chuk
+title: 'Brian Chuk'
+tagline: Brian Chuk
 description: Software Engineer
+url: http://devchuk.github.io
 
 exclude:
   - Gemfile
@@ -7,3 +10,13 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+# Permalinks
+permalink: /blog/:title/
+
+repo: https://github.com/devChuk.github.io
+
+# Portfolio Setup
+collections:
+  projects:
+    output: true

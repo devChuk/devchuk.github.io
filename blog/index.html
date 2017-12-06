@@ -21,30 +21,16 @@
                 <div class="thin-content-wrapper">
                     <div id="blog-posts">
                         <ul>
-                            <li>
-                                <img src="/res/img/Flight.png">
-                                <span>
-                                    <div>How to Travel the World as a Student Dev</div>
-                                    <div class="date">08/02/2017</div>
-                                    <div>Air plant locavore waistcoat, before they sold out jianbing umami gochujang. Prism trust fund offal, +1 cray readymade roof party bushwick hashtag narwhal adaptogen. Franzen skateboard organic green adaptogen. Franzen skateboard organic greenorganic green</div>
-                                </span>
-                            </li>
-                            <li>
-                                <img src="/res/img/Flight.png">
-                                <span>
-                                    <div>Where the Pigeons Sleep</div>
-                                    <div class="date">07/28/2017</div>
-                                    <div>Air plant locavore waistcoat, before they sold out jianbing umami gochujang. Prism trust fund offal gochujang. Prism trust fund offalfund offal</div>
-                                </span>
-                            </li>
-                            <li>
-                                <img src="/res/img/Flight.png">
-                                <span>
-                                    <div>Case Study: Drawing a Deer in the Stars</div>
-                                    <div class="date">07/21/2017</div>
-                                    <div>Air plant locavore waistcoat, before they sold out jianbing umami gochujang. Prism trust fund offal gochujang. Prism trust fund offalfund offal</div>
-                                </span>
-                            </li>
+                            {% for post in site.posts %}
+                                <li>
+                                    <a href="{{ post.url }}"><img src="/res/img/Flight.png"></a>
+                                    <span>
+                                        <a href="{{ post.url }}">{{ post.title }}</a>
+                                        <div class="date">{{ post.date | date: "%m/%-d/%Y" }}</div>
+                                        <div>{{ post.excerpt | strip_html }}</div>
+                                    </span>
+                                </li>
+                            {% endfor %}
                         </ul>
                         <div class="action">SEE ALL PAST ARTICLES</div>
                     </div>

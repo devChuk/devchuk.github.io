@@ -1,3 +1,5 @@
+// particle node animation to render 3D Blender models
+
 /*
 Brian Chuk (brianch.uk)
 Message me on my website and say hello! :)

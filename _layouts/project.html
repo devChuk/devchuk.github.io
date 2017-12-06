@@ -1,0 +1,58 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        <link rel="stylesheet" href="/res/css/project_post.css"/>
+        <title>{{ page.title }} | Brian Chuk</title>
+    </head>
+    <body>
+        {% include header.html 
+            exitText="Close Project"
+            exitLink="/projects"
+        %}
+        <div class="page-title">
+            <div class="wide-content-wrapper">
+                <aside>PROJECTS</aside>
+            </div>
+        </div>
+        <div class="fade-content">
+            <section class="dark-gray-bg">
+                <div class="article-content-wrapper">
+                    <div id="title">{{ page.title }}</div>
+                    <p id="desc">
+                        {{ page.desc }}
+                    </p>
+                    <div class="details">
+                        <div>
+                            <label>{{ page.client }}</label>
+                            <div>{{ page.client_name }}</div>
+                        </div>
+                        <div>
+                            <label>ROLE</label>
+                            <div>{{ page.role }}</div>
+                        </div>
+                        <div>
+                            <label>PLATFORMS</label>
+                            <div>{{ page.platforms }}</div>
+                        </div>
+                        <div>
+                            <label>STATUS</label>
+                            <div>{{ page.status }}</div>
+                        </div>
+                    </div>
+                    <div id="content">
+                        {{ content }}
+                    </div>
+                    <div class="navigation">
+                        <span>PREVIOUS PROJECT</span>
+                        <span>NEXT PROJECT</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        {% include body.html %}
+    </body>
+</html>
