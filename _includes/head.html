@@ -4,8 +4,8 @@
 
 <meta charset="utf-8">
 <title>{{ include.page_title }}</title>
-{% assign image_preview = "http://brianch.uk/" + include.image_preview %}
-{% assign full_url = "http://brianch.uk/" + include.url %}
+{% assign image_preview = "http://brianch.uk" | append: include.image_preview %}
+{% assign full_url = "http://brianch.uk" | append: include.url %}
 <meta name="description" content="{{ include.page_description }}">
 <meta itemprop="name" content="{{ include.page_title }}">
 <meta itemprop="description" content="{{ include.page_description }}">
