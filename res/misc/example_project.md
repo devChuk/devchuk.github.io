@@ -9,6 +9,7 @@ client_name: McHacks II
 role: Full-stack developer
 platforms: Android, iOS, Android Wear
 status: Dormant
+featured: True
 desc: Save written content online and then speedread it. Parrot is a multiplatform app that uses a Chrome extension to send interesting articles one chooses to the app. Once saved, the app then flashes words one at a time for the user to read.
 ---
 

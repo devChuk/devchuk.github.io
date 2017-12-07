@@ -229,4 +229,21 @@ html {
     section.light-gray-bg {
         padding-bottom: 5.35vw;
     }
+
+    #mailing-list-cta > a {
+        color: $black;
+    }
+}
+
+.date > span {
+    float: none !important;
+
+    a {
+        color: $black;
+    }
+}
+
+#next {
+    float: right !important;
+    // sorry
 }

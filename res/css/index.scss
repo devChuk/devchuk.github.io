@@ -182,32 +182,3 @@
         }
     }
 }
-
-#projects {
-    display: flex;
-    flex-flow: row wrap;
-
-    img {
-        padding: 6px;
-        
-        @media only screen and (max-width: 480px) {
-            padding: 3px;
-        }
-    }
-
-    .half-image {
-        flex: 0 0 auto;
-        flex-basis: 49.9%;
-        width: 49.9%;
-        max-width: 49.9%;
-        height: 100%;
-    }
-
-    .full-image {
-        flex: 0 0 auto;
-        flex-basis: 100%;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-    }
-}

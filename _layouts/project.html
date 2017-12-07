@@ -22,6 +22,7 @@
             <section class="dark-gray-bg">
                 <div class="article-content-wrapper">
                     <div id="title">{{ page.title }}</div>
+                    <div class="date">{{ page.date | date: "%m/%Y"  }}</div>
                     <p id="desc">
                         {{ page.desc }}
                     </p>
@@ -45,10 +46,6 @@
                     </div>
                     <div id="content">
                         {{ content }}
-                    </div>
-                    <div class="navigation">
-                        <span>PREVIOUS PROJECT</span>
-                        <span>NEXT PROJECT</span>
                     </div>
                 </div>
             </section>

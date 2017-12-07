@@ -247,6 +247,10 @@ html {
                 background-color: $white;
             }
 
+            a {
+                color: $black;
+            }
+
             .lyon {
                 font-size: 1.23vw;
                 line-height: 1.39vw;
@@ -325,4 +329,8 @@ html {
             }
         }
     }
+}
+
+#see-archive {
+    float: right;
 }

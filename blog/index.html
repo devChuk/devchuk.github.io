@@ -32,7 +32,10 @@
                                 </li>
                             {% endfor %}
                         </ul>
-                        <div class="action">SEE ALL PAST ARTICLES</div>
+                        <div class="action" style="display:none;">
+                            <span id="see-more">SEE MORE</span>
+                            <span id="see-archive">SEE ARCHIVE</span>
+                        </div>
                     </div>
                     <div id="side-info">
                         <div>
@@ -45,12 +48,13 @@
                                 <br><br>
                                 Join my private mailing list.
                             </div>
-                            <div class="action">BECOME A FRIEND</div>
+                            <div class="action"><a href="/newsletter">SIGN UP FOR UPDATES</a></div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+        <script src="/res/js/see_more_posts.js"></script>
         {% include body.html %}
     </body>
 </html>

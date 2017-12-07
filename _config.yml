@@ -20,3 +20,5 @@ repo: https://github.com/devChuk.github.io
 collections:
   projects:
     output: true
+
+exclude:          [./_posts/new.py, ./_projects/new.py]

@@ -16,13 +16,18 @@
         </div>
         <div class="fade-content">
             <section class="dark-gray-bg">
-                <div class="thin-content-wrapper">
-                    {% for post in site.projects %}
-                        <figure class="{{ post.thumbnail_size }}">
-                            <img src="{{ post.thumbnail }}"></img>
+                <div id="projects" class="thin-content-wrapper">
+                    {% for post in site.projects reversed %}
+                        <figure class="{{ post.thumbnail_size }}"
+                                style="background-image:url({{ post.thumbnail }})">
+                            {% if post.thumbnail_size == 'half-img' %}
+                                <img src="/res/img/Flight.png"></img>
+                            {% elsif post.thumbnail_size == 'full-img' %}
+                                <img src="{{ post.thumbnail }}"></img>
+                            {% endif %}
                             <figcaption>
                                 <h2>{{ post.title }}</h2>
-                                <a href="{{ post.ur }}"></a>
+                                <a href="{{ post.url }}"></a>
                             </figcaption>
                         </figure>
                     {% endfor %}
@@ -32,36 +37,9 @@
                             <h2>The Battle of IvenChuk</h2>
                             <a href="http://www.google.com"></a>
                         </figcaption>
-                    </figure>
-                    <figure class="full-img">
-                        <img src="/res/img/Flight.png"></img>
-                        <figcaption>
-                            <h2>Firefly</h2>
-                            <a href="http://www.google.com"></a>
-                        </figcaption>
-                    </figure>
-                    <figure class="half-img">
-                        <img src="/res/img/Flight.png"></img>
-                        <figcaption>
-                            <h2>Owl</h2>
-                            <a href="http://www.google.com"></a>
-                        </figcaption>
-                    </figure>
-                    <figure class="half-img">
-                        <img src="/res/img/Flight.png"></img>
-                        <figcaption>
-                            <h2>Kangaroo</h2>
-                            <a href="http://www.google.com"></a>
-                        </figcaption>
-                    </figure>
-                    <figure class="half-img">
-                        <img src="/res/img/Flight.png"></img>
-                        <figcaption>
-                            <h2>Parrot</h2>
-                            <a href="http://www.google.com"></a>
-                        </figcaption>
                     </figure> -->
-                    <figure class="half-img">
+                    <figure class="half-img"
+                            style="background-image:url(/res/img/projects/project-archive.png)">
                         <img src="/res/img/Flight.png"></img>
                         <figcaption>
                             <h2>Project Archive</h2>

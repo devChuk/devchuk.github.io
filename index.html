@@ -25,7 +25,7 @@
                         </p>
                         <p>
                             I try to write every Sunday.<br>
-                            <a href=""><span>Join my private mailing list</span></a>
+                            <a href="/newsletter"><span>Join my private mailing list</span></a>
                         </p>
                     </div>
                     <div class="action"><a href="/about">LEARN MORE ABOUT ME</a></div>
@@ -60,9 +60,22 @@
             <section class="dark-gray-bg">
                 <div id="projects" class="thin-content-wrapper">
                     <div class="section-title">SELECTED PROJECTS</div>
-                    <img class="half-image" src="./res/img/Flight.png">
-                    <img class="half-image" src="./res/img/Flight.png">
-                    <img class="full-image" src="./res/img/Flight.png">
+                    {% for post in site.projects reversed %}
+                        {% if post.featured %}
+                            <figure class="{{ post.thumbnail_size }}"
+                                style="background-image:url({{ post.thumbnail }})">
+                                {% if post.thumbnail_size == 'half-img' %}
+                                    <img src="/res/img/Flight.png"></img>
+                                {% elsif post.thumbnail_size == 'full-img' %}
+                                    <img src="{{ post.thumbnail }}"></img>
+                                {% endif %}
+                                <figcaption>
+                                    <h2>{{ post.title }}</h2>
+                                    <a href="{{ post.url }}"></a>
+                                </figcaption>
+                            </figure>
+                        {% endif %}
+                    {% endfor %}
                     <div class="action"><a href="/projects">SEE FULL PORTFOLIO</a></div>
                 </div>
             </section>
