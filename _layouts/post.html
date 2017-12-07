@@ -4,7 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include head.html %}
+        {% include head.html 
+            page_title=page.title
+            page_description=page.excerpt
+            image_preview=page.thumbnail
+            url=page.url
+            theme_color="#000"
+        %}
         <link rel="stylesheet" href="/res/css/blog_post.css"/>
         <title>{{ page.title }} | Brian Chuk</title>
     </head>
@@ -32,7 +38,7 @@
                     </div>
                     <div class="details date">
                         {% if page.previous.url %}
-                            <span><a href="{{ page.previous.url }}">PREVIOUS POST</a></span>
+                            <span id="left"><a href="{{ page.previous.url }}">PREVIOUS POST</a></span>
                         {% endif %}
 
                         {% if page.next.url %}
@@ -41,7 +47,7 @@
                     </div>
                 </div>
             </section>
-            <section class="light-gray-bg">
+            <!-- <section class="light-gray-bg">
                 <div class="thin-content-wrapper">
                     <div class="section-title">READ MORE</div>
                     <div id="blog-posts"></div>
@@ -57,9 +63,9 @@
                     </div>
                     <div id="mailing-list-cta" class="action"><a href="/newsletter">SIGN UP FOR THE NEWSLETTER</a></div>
                 </div>
-            </section>
+            </section> -->
         </div>
-        <script src="/res/js/get_post_suggestions.js"></script>
+        <script src="/res/js/get_post_suggestions.min.js"></script>
         {% include body.html %}
     </body>
 </html>

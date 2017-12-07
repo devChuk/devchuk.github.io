@@ -165,16 +165,21 @@ aside {
 
         span:first-child {
             padding-top: 0px;
+
+            @media only screen and (max-width: 400px) {
+                width: 52%;
+                color: red;
+            }
         }
 
         span:last-child {
             float: right;
-            width: 68%;
+            width: 80%;
 
             li {
                 float: right;
                 display: inline-block;
-                margin-left: 2.56vw;
+                margin-left: 2vw;
 
                 img {
                     width: 2.56vw;
@@ -183,6 +188,10 @@ aside {
                         width: 30px;
                     }
                 }
+            }
+
+            li:last-child {
+                margin-left: 0;
             }
         }
     }

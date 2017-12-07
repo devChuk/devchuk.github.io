@@ -4,7 +4,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include head.html %}
+        {% include head.html
+            page_title="Projects | Brian Chuk"
+            image_preview="/res/img/brian-chuk-preview.png"
+            url=page.url
+            theme_color="#fff"
+        %}
         <link rel="stylesheet" href="/res/css/projects.css"/>
     </head>
     <body>
@@ -43,12 +48,18 @@
                         <img src="/res/img/Flight.png"></img>
                         <figcaption>
                             <h2>Project Archive</h2>
-                            <a href="http://www.google.com"></a>
+                            <a target="_blank" href="http://brianch.uk/devchukV2/projects" onclick="return oldSiteWarning();"></a>
                         </figcaption>
                     </figure>
                 </div>
             </section>
         </div>
+        <script type="text/javascript">
+            function oldSiteWarning() {
+                return confirm("Hey! This will take you to an older version of my website. Most of these are hackathon projects and have terrible code quality. Are you sure you'd like to continue?"
+                );
+            }
+        </script>
         {% include body.html %}
     </body>
 </html>

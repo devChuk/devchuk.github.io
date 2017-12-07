@@ -8,7 +8,7 @@ var mobile = false;
 var animated = true;
 if (window.innerWidth > 991) {
     var stargazer = document.createElement('script');
-    stargazer.src = './res/js/stargazer.dev.js';
+    stargazer.src = './res/js/stargazer.min.js';
     stargazer.type = 'text/javascript';
     document.body.appendChild(stargazer);
 }

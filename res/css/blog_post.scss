@@ -236,7 +236,7 @@ html {
 }
 
 .date > span {
-    float: none !important;
+    // float: none !important;
 
     a {
         color: $black;
@@ -246,4 +246,8 @@ html {
 #next {
     float: right !important;
     // sorry
+}
+
+#left {
+    float: left;
 }

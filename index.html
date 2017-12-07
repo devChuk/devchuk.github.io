@@ -4,7 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include head.html %}
+        {% include head.html 
+            page_title="Home | Brian Chuk"
+            page_description="I'm Brian Chuk, a software engineer born, raised, and residing in New York City."
+            image_preview="/res/img/brian-chuk-preview.png"
+            url=page.url
+            theme_color="#fff"
+        %}
          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
          <link rel="stylesheet" href="/res/css/index.css"/>
     </head>
@@ -80,8 +86,8 @@
                 </div>
             </section>
         </div>
-        <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.dev.js"></script>
-        <script src="./res/js/load_stargazer.dev.js" defer></script>
+        <script src="https://unpkg.com/earcut@2.1.1/dist/earcut.min.js"></script>
+        <script src="./res/js/load_stargazer.min.js" defer></script>
         {% include body.html %}
     </body>
 </html>

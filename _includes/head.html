@@ -1,7 +1,35 @@
 <meta charset="UTF-8">
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="utf-8">
+<title>{{ include.page_title }}</title>
+{% assign image_preview = "http://brianch.uk/" + include.image_preview %}
+{% assign full_url = "http://brianch.uk/" + include.url %}
+<meta name="description" content="{{ include.page_description }}">
+<meta itemprop="name" content="{{ include.page_title }}">
+<meta itemprop="description" content="{{ include.page_description }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ include.page_title }}">
+<meta name="twitter:description" content="{{ include.page_description }}">
+<meta name="twitter:site" content="@BrianChuk">
+<meta name="twitter:creator" content="@BrianChuk">
+<meta name="twitter:image:src" content="{{ image_preview }}">
+<meta name="og:title" content="{{ include.page_title }}">
+<meta name="og:description" content="{{ include.page_description }}">
+<meta name="og:image" content="{{ image_preview }}">
+<meta name="og:url" content="{{ full_url }}">
+<meta name="og:site_name" content="Brian Chuk">
+<meta name="og:type" content="OG_TYPE">
+<meta name="theme-color" content="{{ include.theme_color }}">
+
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font/build/web/hack-subset.css'>
+<!--
+
+{{ include.image_preview }}
+URL_HERE
+
+OG_TYPE -->

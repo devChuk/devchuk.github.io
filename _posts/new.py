@@ -13,9 +13,18 @@ title = raw_input('\nEnter title: ')
 
 fileName = date + '-' + title.replace(" ", "-").lower() + '.md'
 print fileName
-file = open(fileName, "w")
 
-file.write('---\nlayout: post\ntitle: ' + title + '\n---\n\n')
+text = """---
+layout: post
+title: The NOTEBOOK is now live!
+thumbnail: /res/img/Flight.png
+desc: written in a cafe in soho
+excerpt: This is an excerpt. Keep it at 100--200 words.
+---
+"""
+
+file = open(fileName, "w")
+file.write(text)
 
 print '\nFile is generated!'
 
