@@ -2,7 +2,7 @@
 layout: project
 title: Kangaroo
 date: Jun 2015
-thumbnail: http://devchuk.github.io/devchukV1/res/img/portimg/kangaroo/prof.jpg
+thumbnail: /res/img/projects/kangaroo-thumb.png
 thumbnail_size: half-img
 client: HACKATHON
 client_name: AngelHack Brooklyn 2015
