@@ -2,7 +2,7 @@
 layout: project
 title: Parrot
 date: Feb 2015
-thumbnail: http://devchuk.github.io/devchukV1/res/img/portimg/parrot/prof.jpg
+thumbnail: /res/img/projects/parrot-thumb.png
 thumbnail_size: half-img
 client: HACKATHON
 client_name: McHacks II
