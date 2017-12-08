@@ -2,7 +2,7 @@
 layout: project
 title: Owl
 date: Aug 2015
-thumbnail: http://devchuk.github.io/devchukV1/res/img/portimg/owl/prof.png
+thumbnail: /res/img/projects/owl-thumb.png
 thumbnail_size: half-img
 client: HACKATHON
 client_name: AngelHack Manhattan 2015
