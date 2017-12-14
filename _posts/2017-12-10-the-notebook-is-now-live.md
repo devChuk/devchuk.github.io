@@ -26,7 +26,7 @@ Ben Kuhn illustrates how writing clarifies thoughts in his [blog](https://www.be
 
 And that’s why this blog's name is the NOTEBOOK. It's an online place of my writing—an online version of my physical notebook. It's a personal challenge as well as a way to improve my writing. I also plan to share things I've written before from my physical notebook.
 
-If you're interested in this website's design and implementation, I'll write it all in next week's post! Currently, I'm using four tools to write my posts:
+If you're interested in this website's design and implementation, I'll write it all in a couple weeks! Currently, I'm using four tools to write my posts:
 
 - a [custom Markdown editor](http://www.brianch.uk/writing/) built by [Joseph Ernest](https://github.com/josephernest/writing)
 - the [iA Writer mobile](https://ia.net/writer/) app is useful for writing on the go.
