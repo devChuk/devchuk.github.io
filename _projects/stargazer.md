@@ -15,7 +15,7 @@ desc: If you visit the home page of this website on a desktop browser, you'll se
 
 <div style="width:100%;height:0;padding-bottom:63%;position:relative;margin-bottom:2.46vw;"><iframe src="https://giphy.com/embed/xT0xeyYYBPqYQlU2Vq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-This project page is a work in progress. I'll finish my description of it by Friday.
+This project page is a work in progress. I'll finish my description of it by Sunday.
 
 <!--
     Write a proper description
