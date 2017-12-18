@@ -28,7 +28,7 @@ The animation is divided into three main phases:
 2. A starfield, a set of slow-moving points that form connections with nearby neighbors
 3. A deer constellation formed out of the stars
 
-All of the objects in the phases are composed of invisible nodes and visible, white connections. I keep track of the phases with a global `_stage` object. Note how a `TRANSITION` property is added. This stage is used in between the other stages to determine how to move the nodes to a new stage.
+All of the objects in the phases are composed of invisible nodes and visible connections. I keep track of the phases with a global `_stage` object. Note how a `TRANSITION` property is added. This stage is used in between the other stages to determine how to move the nodes to a new stage.
 
 {% highlight javascript %}
 var STAGE = {
@@ -204,7 +204,7 @@ Drawing the deer out of nodes was the most complicated part. I modeled the gener
 When I had the vertices for the deer, I set the outside boundary points as the goal points for the transition. Then, I generated several uniformly random points inside the deer.
 
 But how does one get a random point inside an irregular polygon? I used three steps:
-1. Generate an array of triangles that cover the same area as the deer. I found an open source polygon triangulation library called [Earcut](https://github.com/mapbox/earcut).
+1. Generate an array of triangles that cover the same area as the deer. I found an open source polygon triangulation library called [Earcut](https://github.com/mapbox/earcut)
 2. Randomly select which triangle to use, weighted by its area. For instance if triangle A is 75% of the area and triangle B is 25% of the area, triangle A should be picked 75% of the time and B should be 25%. The snippet below does this
 3. Select a random point within that triangle
 
