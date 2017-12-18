@@ -19,7 +19,7 @@ While working on this personal website, I wanted to create a home page backgroun
 
 The [finished product](http://www.brianch.uk) turned out to be a lot like I originally saw in my mind, but not without overcoming some obstacles.
 
-As I was looking for a concept, my friends and I drove to Lake Tahoe to go stargazing. As a native New Yorker, I was completely surprised. I had never seen that many stars before and the idea for a homage stargazing became clear. After several sketches and plans in my notebook, I was ready to start coding.
+As I was looking for a concept, my friends and I drove to Lake Tahoe to go stargazing. As a native New Yorker, I was completely surprised. I had never seen that many stars before and the idea for a homage to stargazing became clear. After several sketches and plans in my notebook, I was ready to start coding.
 
 When coding creative projects, constant reiteration is required to build experiences that look and feel great. I like to have a "playground" section of code to hack together ideas with complete disregard for strict coding practices. This way, I can quickly get ideas out into the environment and iterate on behavior and motion design. Once things look good, I can rewrite the section into production code. This has the additional benefit of already knowing how to structure my code, and saves a bit of refactoring later on.
 
