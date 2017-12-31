@@ -18,9 +18,11 @@ text = """---
 layout: post
 title: The NOTEBOOK is now live!
 thumbnail: /res/img/Flight.png
-desc: written in a cafe in soho
+desc: Est. 10 minutes read
 excerpt: This is an excerpt. Keep it at 100--200 words.
 ---
+
+<h6 style="color: #808080;">Brian Chuk. <em>Written in NYC</em></h6>
 """
 
 file = open(fileName, "w")

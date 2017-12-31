@@ -441,6 +441,7 @@ a {
     }
 
     code.highlighter-rouge {
+        white-space: nowrap;
         border: 1px solid $gray;
         border-radius: 3px;
         background: $lightGray;
