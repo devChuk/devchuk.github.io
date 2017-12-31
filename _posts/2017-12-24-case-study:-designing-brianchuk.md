@@ -148,11 +148,13 @@ In the picture above, Lyon Text is displayed in <span style="color:#e74c3c;">red
 
 Another geometric sans-serif typeface. But in contrast to Circular, it's extremely angular. I chose Blender because of how noticeably different it is from the other two typefaces. It also feels technical and data-driven, which fits the focus of this website. Which is why it's used by [Palantir](palantir.com).
 
-# Page Design
+# Page Design & Implementation
 
 I used the same approach when designing each page. I started with writing down all of the content of each page, and then arranged the content. One style rule I tried to follow was to avoid containers and cards. I wanted to focus more on the content and have text stand by itself.
 
 You can see how I make more screen room for the content with the header's design. It's a navigation bar of floating links and a transparent gradient, to minimize attention.
+
+The website is programmed in HTML (608 lines), SCSS (1911 lines), and Javascript (1312 lines). I use Jekyll to generate my static website, and [guard-livereload](https://github.com/guard/guard-livereload) to autorefresh my pages. Since I don't use a Mac, I used [Figma](https://www.figma.com) to prototype my UI. The icons are sourced from [Entypo](http://www.entypo.com) and the mobile hamburger is from [John Suh](https://jonsuh.com/hamburgers/).
 
 # Conclusion
 
