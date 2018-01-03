@@ -3,7 +3,7 @@ layout: post
 title: Where the Pigeons Sleep
 thumbnail: /res/img/notebook/pigeons-thumb.jpg
 desc: Est. 10 minutes read
-excerpt: This is an excerpt. Keep it at 100--200 words.
+excerpt: I just moved into a room in East Village, a few blocks away from the Facebook NY Office. It's going to be a short stay, but I'm not sure how long I'll be staying. I was making my bed on my first night here and I found, in the alleyway directly above my window, a cement-gray pigeon. It was perched next to each other on an iron bar, eyes closed, and didn't seem to notice as I peered up at them. It just sat there, its beak pointing into the nothingness of our dark, thin alleyway.
 ---
 
 ![Fire escapes](/res/img/notebook/pigeons-thumb.jpg)
