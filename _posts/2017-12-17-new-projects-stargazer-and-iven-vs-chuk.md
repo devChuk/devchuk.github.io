@@ -20,4 +20,4 @@ Stargazer is a creative coding Javascript experiment that represents seeing cons
 
 The Battle of IvenChuk is a two player fighting C++ game where you can play as my friend or me! Read about the build process and our moves [here](/projects/the_battle_of_ivenchuk/).
 
-<h6 style="color: #808080;">Brian Chuk. <em>Written in NYC</em></h6>
+<h6 style="color: #808080;">Brian Chuk. Written from Little Neck, New York City</h6>

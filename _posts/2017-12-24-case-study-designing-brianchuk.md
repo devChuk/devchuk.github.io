@@ -11,7 +11,7 @@ From March 31st, 2014 to December 29th, 2017, I've made 963 commits on my person
 
 These tiny, minute changes constitute three full redesigns. Rebuilding my personal website was a way for me to cultivate good HTML/CSS practices and actually remember how to center a div. There was always something to learn and improve on. I always felt that my website could have been more accessible and polished.
 
-Finally, within the last few months, I decided to learn UI design, change up the whole design, put some thought into my goals for it, and officially have a version 3.0.0 (though it's probably somewhere closer to version 3.1.23 by now). I'm still trying to improve on it, but currently I'm mostly satisfied with how it turned out. Moving forward, I plan to add small features and design fixes through more small commits.
+Finally, within the last few months, I decided to learn UI design, change up the whole interface, put some thought into my goals for it, and officially have a version 3.0.0 (though it's probably somewhere closer to version 3.1.23 by now). I'm still trying to improve on it, but currently I'm mostly satisfied with how it turned out. Moving forward, I plan to add small features and design fixes through small commits.
 
 I thought you might like to see the redesigns the site went through. I'll also walk through my process for designing version 3.0 after. If you're interested in learning UI design, think of this post as a crash course in it.
 
@@ -25,7 +25,7 @@ At the time, I had to consult Stack Overflow constantly because I didn't know HT
 
 As you can see, I didn't put much thought into the design. I used the typeface [Droid Sans](https://www.typewolf.com/site-of-the-day/fonts/droid-sans) because it was free. I used the color red because it's my favorite color. The favicon I made is supposed to be a pinwheel&mdash;I have no idea what my reasoning was for that.
 
-Since I didn't know what media queries were, the site was not responsive at all. If you opened it up on a phone, it would redirect you to an [about.me](https://about.me/brian.chuk) page instead.
+Since I didn't know what media queries were, the site was not responsive at all. If you opened it up on a phone, it would redirect you to an [about.me](https://about.me/brian.chuk) page.
 
 You can check out the site [here](http://www.brianch.uk/devchukV1/) and the code [here](http://www.github.com/devChuk/devChukV1/).
 
@@ -37,6 +37,8 @@ You can check out the site [here](http://www.brianch.uk/devchukV1/) and the code
 
 This time, I used the typefaces [Lato](https://www.typewolf.com/site-of-the-day/fonts/lato), [Big John](https://www.behance.net/gallery/19484739/big-john-slim-joe-free-font/), and [Keep Calm](https://www.dafont.com/keep-calm.font). The favicon is a solid color that changes respective to the theme of the web page.
 
+You can check out the site [here](http://www.brianch.uk/devchukV2/) and the code [here](http://www.github.com/devChuk/devChukV2/).
+
 # Designing Version 3.0 &ndash; December, 2017
 
 [![image](/res/img/notebook/redesign-v3.png)](http://www.brianch.uk/)
@@ -47,7 +49,7 @@ This time, I used the typefaces [Lato](https://www.typewolf.com/site-of-the-day/
 - Website should look more professional and timeless. I don't plan to have another major redesign for around a decade hopefully
 - Quality content is king. Focus on having good writing/imagery and display it in a neat, clean, minimalist manner
 - Website should look unique. I wanted it to have a style that's distinctly mine. It shouldn't have been seen before in another software engineer's site
-- Website should feel personal. I loved it when I saw my friends browse through my old projects and read their stories. The website should encourage a browsing/digging behavior
+- Website should feel personal. I loved it when I saw my friends browse through my old projects and read my stories. The website should encourage a browsing/digging behavior
 - Website should be easy to manage (for me to add more content)
 
 There was one question I had to answer before I started designing.
@@ -106,7 +108,7 @@ To focus more on content, I wanted to understate the user interface. I used a pa
 
 Using several shades of gray also enables me to control how much contrast I want between elements. If I want to lower the importance of something or smooth out a transition between sections, I can use grays that are close together. If I want to indicate, "**HEY**, we're onto something different now," I can use a jarring contrast of grays. The NOTEBOOK blog elements are associated with a light gray background, while portfolio-related elements are associated with a dark gray background.
 
-If I wanted to demand attention with color, I used red. However, the red did not contrast well in dark grays and the color tends to have a negative connotation, so I lightened it to a reddish-orange.
+If I wanted to demand attention with color, I started with a red. However, the red did not contrast well in dark grays and the color tends to have a negative connotation, so I lightened it to a reddish-orange.
 
 # Typography
 
@@ -140,7 +142,7 @@ I chose Lyon because it also pairs well with Circular. To find fonts that aesthe
 
 ![Font Pairing](/res/img/notebook/redesign-fontpair.png)
 
-In the picture above, Lyon Text is displayed in <span style="color:#e74c3c;">red</span> while Circular is displayed in <span style="color:#3498db;">blue</span>. Notice how corresponding characters have matching strokes and have the same amounts of empty space within them.
+In the picture above, Lyon Text is displayed in <span style="color:#e74c3c;">red</span> while Circular is displayed in <span style="color:#3498db;">blue</span>. Notice how corresponding characters have matching strokes and have the same amounts of empty space within them. If the letterforms cover each other well, then the typefaces will pair well.
 
 ## Blender
 
@@ -148,15 +150,19 @@ In the picture above, Lyon Text is displayed in <span style="color:#e74c3c;">red
 
 Another geometric sans-serif typeface. But in contrast to Circular, it's extremely angular. I chose Blender because of how noticeably different it is from the other two typefaces. It also feels technical and data-driven, which fits the focus of this website. Which is why it's used by [Palantir](palantir.com).
 
+It's useful for displaying text that is distinct from the rest of the content. I use Blender for three purposes in the site: calls to action, labels, and dates.
+
 # Page Design & Implementation
 
 I used the same approach when designing each page. I started with writing down all of the content of each page, and then arranged the content. One style rule I tried to follow was to avoid containers and cards. I wanted to focus more on the content and have text stand by itself.
 
 You can see how I make more screen room for the content with the header's design. It's a navigation bar of floating links and a transparent gradient, to minimize attention.
 
-The website is programmed in HTML (608 lines), SCSS (1911 lines), and Javascript (1312 lines). I use Jekyll to generate my static website, and [guard-livereload](https://github.com/guard/guard-livereload) to autorefresh my pages. Since I don't use a Mac, I used [Figma](https://www.figma.com) to prototype my UI. The icons are sourced from [Entypo](http://www.entypo.com) and the mobile hamburger is from [John Suh](https://jonsuh.com/hamburgers/).
+The website is programmed in HTML (608 lines), SCSS (1911 lines), and Javascript (1312 lines). I use [Jekyll](https://jekyllrb.com) to generate my static website. [Guard-livereload](https://github.com/guard/guard-livereload) was really handy while I programmed and wrote. It automatically refreshes my web pages when I save an update, so I don't have to. Since I don't use a Mac, I used [Figma](https://www.figma.com) to prototype my UI. The icons are sourced from [Entypo](http://www.entypo.com) and the mobile hamburger is from [John Suh](https://jonsuh.com/hamburgers/). I use [tinypng](https://tinypng.com) to compress my images.
 
-# Conclusion
+You can look at the site code [here](http://www.github.com/devChuk/devchuk.github.io).
+
+# And that takes us to today
 
 So what do you think of the new layout, design, and structure? Is it fast and easy to navigate? What do you wish would be added or taken away?
 
@@ -164,8 +170,9 @@ I still have a few additions to implement. Off the top of my head they are:
 
 - Fix the vertical rhythm. Vertical spaces between elements on a page should be consistent with each other. I feel that at some points my spacing in this website is a bit awkward
 - Launch the [newsletter](/newsletter/). I haven't kicked off the email list because there's such a few amount of blog posts. Who would want to sign up for something that doesn't have any samples?
-- Expand the width of code snippets. Sometimes the code does not fit in the boxes
-- Figure out what my voice is. This is more about improving the substance of these blog posts and making them feel more natural.
+- Expand the width of code snippets from article width to the full window. Sometimes the code does not fit in the boxes
+- Figure out what my voice is. This is more about improving the substance of these blog posts and making them feel more natural
+- Add a contact page? I'm still considering whether I actually need this. If I do, [Formspree](https://formspree.io) is a great project that supports static HTML pages
 
 In retrospect, I probably could have just updated the styles of old personal website instead of completely rewriting everything from scratch. It would have been much faster to simply change the color scheme, typefaces, and fix up the spacing.
 
@@ -183,4 +190,4 @@ If you're interested in learning more about good typography and UI design, I rec
 - If you have the time, [Butterick's Practical Typography](https://practicaltypography.com) is an incredible resource
 - [Erik Kennedy](http://erikdkennedy.com) writes a ton of articles on UI/UX design and runs a [UI/UX course](https://learnui.design)  as well
 
-<h6 style="color: #808080;">Brian Chuk. <em>Written in a BEAN &amp; BEAN Cafe in NYC</em></h6>
+<h6 style="color: #808080;">Brian Chuk. Written from Little Neck, New York City</h6>

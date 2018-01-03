@@ -33,4 +33,4 @@ If you're interested in this website's design and implementation, I'll write it 
 - the [Hemingway editor](http://www.hemingwayapp.com) helps me proofread my work
 - Nimran's [Read-O-Meter](http://niram.org/read/) estimates the reading time of my posts
 
-<h6 style="color: #808080;">Brian Chuk. <em>Written in Argo Tea Cafe in New York University</em></h6>
+<h6 style="color: #808080;">Brian Chuk. Written from Greenwich Village, New York City</h6>

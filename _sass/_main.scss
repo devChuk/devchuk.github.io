@@ -184,6 +184,11 @@ a {
     text-decoration: none;
 }
 
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
 .wide-content-wrapper,
 .thin-content-wrapper,
 .article-content-wrapper {
