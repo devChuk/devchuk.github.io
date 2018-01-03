@@ -34,3 +34,4 @@ If you're interested in this website's design and implementation, I'll write it 
 - Nimran's [Read-O-Meter](http://niram.org/read/) estimates the reading time of my posts
 
 <h6 style="color: #808080;">Brian Chuk. Written from Greenwich Village, New York City</h6>
+<h6 style="color: #808080;">Photo by yours truly</h6>
