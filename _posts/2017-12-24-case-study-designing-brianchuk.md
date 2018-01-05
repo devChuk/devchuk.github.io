@@ -173,6 +173,7 @@ I still have a few additions to implement. Off the top of my head they are:
 - Expand the width of code snippets from article width to the full window. Sometimes the code does not fit in the boxes
 - Figure out what my voice is. This is more about improving the substance of these blog posts and making them feel more natural
 - Add a contact page? I'm still considering whether I actually need this. If I do, [Formspree](https://formspree.io) is a great project that supports static HTML pages
+- Look into home page animation code issues. Not all computers (such as old netbooks) are capable of running it, so it'd be helpful to automatically cancel the animation if it's too laggy
 
 In retrospect, I probably could have just updated the styles of old personal website instead of completely rewriting everything from scratch. It would have been much faster to simply change the color scheme, typefaces, and fix up the spacing.
 
