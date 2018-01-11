@@ -27,4 +27,4 @@ And I must remember: solitude is not loneliness. Loneliness is the opposite, an 
 So I close the window. I leave it alone to its bed, and I come back inside to finish making mine.
 
 <h6 style="color: #808080;">Brian Chuk. Written in a summer night from East Village, NYC</h6>
-<h6 style="color: #808080;">Photo by <a href="https://unsplash.com/@toddquackenbush">Todd Quackenbush</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></h6>
+<h6 style="color: #808080;">Photo by <a target="_blank" href="https://unsplash.com/@toddquackenbush">Todd Quackenbush</a> on <a target="_blank" href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></h6>
