@@ -55,7 +55,7 @@ Pizza in New York City is baked in Olympus and delivered to the city via Zeus hi
 
 # The Burritos
 
-Burritos in San Francisco are hand-rolled by Zeus and delivered from the Pacific Ocean in the tender grasp of Poseidon. Burritos from New York doesn't compare.
+Burritos in San Francisco are hand-rolled by Zeus and delivered from the Pacific Ocean in the tender grasp of Poseidon. Burritos from New York do not compare.
 
 # The People
 
@@ -63,7 +63,7 @@ This is the biggest difference. NYC has a population of 8 million residents that
 
 ![Tech is everything in SF](/res/img/notebook/nysf-tech.png)
 
-In San Francisco, there's no escaping the tech scene. Most of the advertisements I've seen are about developer APIS or technical hiring. A company claimed that its yogurt was so rich "that it could buy your startup." Even Häagen-Dazs tried to cater to software engineers by including code in its advertisements. I'd show up to a party in the Bay, and almost everyone there would be a programmer. This might be attractive to someone who's interested in purely tech, but I want something more well-rounded.
+In San Francisco, there's no escaping the tech scene. Most of the advertisements I've seen are about developer APIS or technical hiring. A company claimed that its yogurt was so rich "that it could buy your startup." Even Häagen-Dazs tried to cater to software engineers by including code in its advertisements. I'd show up to a party in the Bay, and almost everyone there would be a programmer. This might be attractive to someone who's interested in purely tech, but I want something more well-rounded. Having my life become 100% tech felt unbalanced. It was refreshing to do things and meet people who had nothing to do with the tech industry.
 
 Technology isn't the main focus in New York. It's a medium&mdash;a means to an end.
 
@@ -71,18 +71,18 @@ Technology isn't the main focus in New York. It's a medium&mdash;a means to an e
 
 So which city is better? New York or San Francisco? Neither. In the end, both cities have their pros and cons, and it depends mainly on what you care about.
 
-Personally, I'd choose New York over San Francisco. There's just no place like home. But if I had my way, I'd definitely migrate to the West Coast to escape the winter here.
+Personally, I'd choose New York over San Francisco. I can imagine living in SF for a couple years, but I'll have to move back eventually. There's just no place like home. But if I had my way, I'd definitely migrate to the West Coast to escape the winter here.
 
 
 ![Stars above a lake](/res/img/notebook/nysf-tahoe.jpg)
 
 We arrived at the airbnb, unpacked our bags, and stood on the balcony outside watching the night starry sky. Thanks to this summer, I've learned what it's like to live in a city that's not New York. I've gotten out of a comfort zone. But more importantly, I've learned more about myself and what truly matters to me.
 
-In the end, yes, the factors above are important&mdash;but what matters most is what I'm doing and who I'm with. I need to spend time on work that I find meaningful. I need friends that I love being around. If these things are satisfied, I think I'll be able to live anywhere: in any city or even a small town in the middle of nowhere. I'll be okay.
+In the end, yes, the factors above are important when living somewhere new&mdash;but what matters most is what I'm doing and who I'm with. I need to spend time on work that I find meaningful. I need friends that I love being around. If these things are satisfied, I think I'll be able to live anywhere: in any city or even a small town in the middle of nowhere. I'll be okay.
 
-We walked back from the balcony into the house to finish the rest of our unpacking. I lied down on the couch and instantly fell asleep&mdash;too exhausted from our long car ride.
+We walked back from the balcony into the house to finish the rest of our unpacking. I lied down onto a couch and passed out&mdash;too exhausted from the long car ride.
 
-The next morning, I woke up to sunlight flooding in from the windows. Someone had draped a couple blankets over me while I slept.
+The next morning, I woke up to a warm, quiet sunlight flooding in from the windows. Someone had draped a couple blankets over me while I slept.
 
 <h6 style="color: #808080;">Brian Chuk. Written during one of the coldest winters ever in NYC. </h6>
 
