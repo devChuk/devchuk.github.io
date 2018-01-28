@@ -2,7 +2,7 @@
 layout: post
 title: The Difference Between Living in New York and San Francisco
 thumbnail: /res/img/notebook/nysf-thumb.jpg
-desc: Est. 10 minutes read
+desc: Est. 6 minutes read
 excerpt: "My high school friends and I just left our pit stop in Sacramento, and had a couple hours until we reached our private airbnb by Lake Tahoe. The goal of our trip: escape urban San Francisco and go stargazing. We were in one of the last days of summer, and I've spent around four months living in the SF Bay Area. I was worried that I'd regret moving here when I flew over."
 ---
 
