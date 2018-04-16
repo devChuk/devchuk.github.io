@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include head.html 
+        {% include head.html
             page_title=page.title
             page_description=page.excerpt
             image_preview=page.thumbnail
@@ -15,7 +15,7 @@
         <title>{{ page.title }} | Brian Chuk</title>
     </head>
     <body>
-        {% include header.html 
+        {% include header.html
             hideBorderHack="true"
             exitText="Close Article"
             exitLink="/blog"
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </section>
-            <!-- <section class="light-gray-bg">
+            <section class="light-gray-bg">
                 <div class="thin-content-wrapper">
                     <div class="section-title">READ MORE</div>
                     <div id="blog-posts"></div>
@@ -63,7 +63,7 @@
                     </div>
                     <div id="mailing-list-cta" class="action"><a href="/newsletter">SIGN UP FOR THE NEWSLETTER</a></div>
                 </div>
-            </section> -->
+            </section>
         </div>
         <script src="/res/js/get_post_suggestions.min.js"></script>
         {% include body.html %}

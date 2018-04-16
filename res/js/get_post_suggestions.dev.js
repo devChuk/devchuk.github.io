@@ -37,7 +37,7 @@ function getPosts (response) {
         result.push(
             posts.splice(
                 Math.floor(Math.random() * posts.length),
-                1)
+                1)[0]
         );
     }
 
