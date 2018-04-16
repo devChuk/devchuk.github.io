@@ -1,8 +1,8 @@
-# devChukV2
-Final personal website design
+# devChukV3
+[Personal website](http://www.brianch.uk/)
 
 ## Notes
-
+```
 * 7.7 / 144 magic ratio.
 
 bundle exec jekyll serve --watch
@@ -15,3 +15,4 @@ find . -path ./_site -prune -o -name '*.html' | xargs wc -l
 find . -name '*.scss' | xargs wc -l
 find . -name '*.css' | xargs wc -l
 find . -name '*.dev.js' | xargs wc -l
+```
