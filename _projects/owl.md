@@ -31,7 +31,7 @@ String[] msPerStepArray = msPerStep.toArray(new String[NUMBER_OF_STEPS_TRACKED +
 for (int i = 0; i < msPerStepArray.length; i++) {
     if (i < msPerStepArray.length - 1) {
         Long dx_msPerStep = Math.abs(Long.valueOf(msPerStepArray[i]) - Long.valueOf(msPerStepArray[i + 1]));
-        if (dx_msPerStep > ABNORNAL_THRESHOLD) {
+        if (dx_msPerStep > ABNORMAL_THRESHOLD) {
             abnormals++;
         }
     }
