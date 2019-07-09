@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% include head.html 
+        {% include head.html
             page_title=page.title
             page_description=page.desc
             image_preview=page.thumbnail
@@ -15,7 +15,7 @@
         <title>{{ page.title }} | Brian Chuk</title>
     </head>
     <body>
-        {% include header.html 
+        {% include header.html
             exitText="Close Project"
             exitLink="/projects"
         %}
@@ -28,7 +28,7 @@
             <section class="dark-gray-bg">
                 <div class="article-content-wrapper">
                     <div id="title">{{ page.title }}</div>
-                    <div class="date">{{ page.date | date: "%m/%Y"  }}</div>
+                    <div class="date">{{ page.date | date: "%B %Y"  }}</div>
                     <p id="desc">
                         {{ page.desc }}
                     </p>

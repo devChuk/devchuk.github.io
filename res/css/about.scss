@@ -174,18 +174,26 @@ aside {
 
         span:last-child {
             float: right;
-            width: 80%;
+            width: 91%;
 
             li {
                 float: right;
                 display: inline-block;
                 margin-left: 2vw;
 
+                @media only screen and (max-width: 500px) {
+                    margin-left: 1vw;
+                }
+
                 img {
                     width: 2.56vw;
 
                     @media only screen and (max-width: 1000px) {
                         width: 30px;
+                    }
+
+                    @media only screen and (max-width: 500px) {
+                        width: 20px;
                     }
                 }
             }

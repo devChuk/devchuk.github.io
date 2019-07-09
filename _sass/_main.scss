@@ -30,7 +30,7 @@ body {
     min-height: 100vh;
 }
 
-$header-gradient: 0.5; 
+$header-gradient: 0.5;
 
 .header-background {
     position: fixed;
@@ -42,6 +42,18 @@ $header-gradient: 0.5;
     background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,$header-gradient)); /*Opera 11.1-12*/
     background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,$header-gradient)); /*Fx 3.6-15*/
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,$header-gradient)); /*Standard*/
+    background: linear-gradient(
+        hsl(0, 0%, 0%) 0%,
+        hsla(0, 0%, 0%, 0.738) 19%,
+        hsla(0, 0%, 0%, 0.541) 34%,
+        hsla(0, 0%, 0%, 0.382) 47%,
+        hsla(0, 0%, 0%, 0.278) 56.5%,
+        hsla(0, 0%, 0%, 0.194) 65%,
+        hsla(0, 0%, 0%, 0.126) 73%,
+        hsla(0, 0%, 0%, 0.075) 80.2%,
+        hsla(0, 0%, 0%, 0.042) 86.1%,
+        hsla(0, 0%, 0%, 0.021) 91%
+    ); /*Standard w/ Scrim Material Design Gradient*/
     z-index: 90;
 }
 
@@ -80,7 +92,7 @@ header {
                 margin-right: 30px;
                 z-index: 20;
                 color: white;
-                
+
                 a {
                     white-space: pre;
                 }
@@ -102,7 +114,7 @@ header {
     > div > span:last-child {
         float: right;
         z-index: 10;
-        
+
         li {
             display: inline-block;
             margin-left: 10px;
@@ -163,7 +175,7 @@ header {
     right: 0
 }
 
-canvas {    
+canvas {
     position: fixed;
     z-index: -100;
     background-color: $darkGray;
@@ -182,6 +194,14 @@ section {
 a {
     color: $white;
     text-decoration: none;
+}
+
+i, em {
+    font-style: italic;
+}
+
+b, strong {
+    font-weight: 600;
 }
 
 sup {
@@ -210,7 +230,7 @@ sup {
 }
 
 .article-content-wrapper {
-    width: 780px;
+    width: 700px;
 
     @media only screen and (max-width: 1000px) {
         width: 80vw;
@@ -349,129 +369,5 @@ sup {
         flex-basis: 50%;
         width: 50%;
         max-width: 50%;
-    }
-}
-
-#content {
-    word-wrap: break-word;
-
-    img {
-        width: 100%;
-    }
-
-    .himg {
-        width: 49%;
-    }
-
-    .himg:first-child {
-        margin-right: 1%;
-    }
-
-    p, ol, ul {
-        font-size: 22px;
-        line-height: 1.5em;
-
-        @media only screen and (max-width: 932px) {
-            font-size: 20px;
-        }
-    }
-
-    p, ol, ul, h1, h2, h3, h4, h5, h6, .highlight, iframe {
-        margin-bottom: 2.46vw;
-
-        @media only screen and (max-width: 932px) {
-            margin-bottom: 1.3em;
-        }
-    }
-
-    a {
-        color: $red;
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-        margin-bottom: 2.46vw;
-    }
-
-    h1 { font-size: 2.3em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.47em; }
-    h4 { font-size: 1.42em; }
-    h5 { font-size: 1.13em; }
-    h6 { font-size: 1.05em; }
-
-    blockquote {
-        font-family: 'Lyon Display';
-        text-align: center;
-
-        p {
-            font-size: 4em;
-
-            @media only screen and (max-width: 932px) {
-                font-size: 30px;
-            }
-        }
-    }
-
-    ul, ol {
-        margin-left: 2em;
-    }
-
-    ol {
-        list-style: decimal;
-    }
-
-    ul {
-        list-style: disc;
-    }
-
-    code {
-        font-family: 'Hack';
-        font-size: 1rem;
-        background: #111111;
-        color: $white;
-
-        @media only screen and (max-width: 932px) {
-            font-size: 0.75rem;
-            line-height: 1.2em;
-        }
-    }
-
-    code.highlighter-rouge {
-        white-space: nowrap;
-        border: 1px solid $gray;
-        border-radius: 3px;
-        background: $lightGray;
-        color: $darkGray;
-    }
-
-    .highlight {
-        overflow: auto;
-        padding: 30px;
-        font-family: 'Hack';
-        line-height: 1.5em;
-    }
-
-    figcaption {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 0.9em;
-    }
-
-    .group {
-        margin-bottom: 2.46vw;
-    }
-
-    .lineno {
-        color: $gray;
-        padding-right: 10px;
     }
 }

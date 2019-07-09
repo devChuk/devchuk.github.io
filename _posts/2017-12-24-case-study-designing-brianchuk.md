@@ -2,7 +2,6 @@
 layout: post
 title: "Case Study: Website Redesign"
 thumbnail: /res/img/notebook/redesign-thumb.png
-desc: Est. 11 minutes read
 excerpt: From March 31st, 2014 to December 29th, 2017, I've made 963 commits on my personal website, brianch.uk. That means that there's technically 963 versions of the site&mdash;but most of these commits are small tweaks that added up to slightly different versions through the two years this site has been around.
 ---
 
@@ -82,7 +81,7 @@ For instance, on large screens I used three different page width CSS classes. Li
 
 ![alignment](/res/img/notebook/redesign-align.png)
 
-Having multiple widths is also useful in controlling how I want to display information. Larger, attention-grabbing text works well with `wide-content-wrapper` to take up more of the screen. Longform content such as this blog post is easier to read when placed inside a thinner width. 
+Having multiple widths is also useful in controlling how I want to display information. Larger, attention-grabbing text works well with `wide-content-wrapper` to take up more of the screen. Longform content such as this blog post is easier to read when placed inside a thinner width.
 
 ![flow](/res/img/notebook/redesign-flow.png)
 
@@ -191,4 +190,4 @@ If you're interested in learning more about good typography and UI design, I rec
 - If you have the time, [Butterick's Practical Typography](https://practicaltypography.com) is an incredible resource
 - [Erik Kennedy](http://erikdkennedy.com) writes a ton of articles on UI/UX design and runs a [UI/UX course](https://learnui.design)  as well
 
-<h6 style="color: #808080;">Brian Chuk. Written from Little Neck, New York City</h6>
+<h6 style="color: #808080;">UPDATE — I've decided to use Circular Book instead of Lyon Text for my blog typeface. Lyon just felt too formal for what I was writing.</h6>

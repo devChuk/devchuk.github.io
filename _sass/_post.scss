@@ -1,0 +1,146 @@
+#title {
+    font-size: 4.28vw;
+    line-height: 4.75vw;
+    margin-left: -0.06em;
+    padding-bottom: 0.5em;
+
+    @media only screen and (max-width: 932px) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+#content {
+    word-wrap: break-word;
+
+    img {
+        width: 100%;
+    }
+
+    .himg {
+        width: 49%;
+    }
+
+    .himg:first-child {
+        margin-right: 1%;
+    }
+
+    a {
+        color: $red;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        line-height: 1.15em;
+    }
+
+    h1 { font-size: 2.3em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.47em; }
+    h4 { font-size: 1.42em; }
+    h5 { font-size: 1.13em; }
+    h6 { font-size: 1.05em; }
+
+    @media only screen and (max-width: 932px) {
+        h1 { font-size: 1.88em; }
+        h2 { font-size: 1.47em; }
+        h3 { font-size: 1.202em; }
+        h4 { font-size: 1.16em; }
+        h5 { font-size: 1.10em; }
+        h6 { font-size: 1.05em; }
+    }
+
+    blockquote {
+        font-family: 'Lyon Display';
+        text-align: center;
+
+        p {
+            font-size: 4em;
+
+            @media only screen and (max-width: 932px) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    ul, ol {
+        margin-left: 2em;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    code {
+        font-family: 'Hack';
+        font-size: 1rem;
+        background: #111111;
+        color: $white;
+
+        @media only screen and (max-width: 932px) {
+            font-size: 0.75rem;
+            line-height: 1.2em;
+        }
+    }
+
+    code.highlighter-rouge {
+        white-space: nowrap;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        background: $lightGray;
+        color: $darkGray;
+    }
+
+    .highlight {
+        overflow: auto;
+        padding: 30px;
+        font-family: 'Hack';
+        line-height: 1.5em;
+    }
+
+    figcaption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.9em;
+    }
+
+    .group {
+        margin-bottom: 2.46vw;
+    }
+
+    .lineno {
+        color: $gray;
+        padding-right: 10px;
+    }
+
+    p, ol, ul {
+        font-size: 20px;
+        line-height: 1.58em;
+
+        @media only screen and (max-width: 932px) {
+            font-size: 18px;
+        }
+    }
+
+    p, ol, ul, h1, h2, h3, h4, h5, h6, .highlight, iframe, .twt {
+        margin-bottom: 35px;
+
+        @media only screen and (max-width: 932px) {
+            margin-bottom: 28px;
+        }
+    }
+}
+
+.page-title aside, section:first-child {
+    padding-top: 10.5vw;
+}
+
+@media only screen and (max-width: 1300px) {
+    aside {
+        display: none;
+    }
+}

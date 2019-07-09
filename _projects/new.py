@@ -27,4 +27,4 @@ file.write(text)
 
 print '\nFile is generated!'
 
-os.system("sublime-text " + fileName)
+os.system("atom " + fileName)

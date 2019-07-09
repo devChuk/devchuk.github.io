@@ -31,7 +31,7 @@
                     <div id="title">{{ page.title }}</div>
                     <div class="details date">
                         <span>{{ page.desc }}</span>
-                        <span>{{ page.date | date: "%m/%-d/%Y" }}</span>
+                        <span>{{ page.date | date: "%B %-d, %Y" }}</span>
                     </div>
                     <div id="content">
                         {{ content }}
@@ -53,7 +53,7 @@
                     <div id="blog-posts"></div>
                     <div id="side-info">
                         <div>
-                            <div class="lyon">
+                            <div id="text">
                                 Want updates of new essays and what I'm working on?
                                 <br><br>
                                 Join my private mailing list.

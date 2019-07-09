@@ -5,6 +5,7 @@
 // IMPORTS //
 //
 @import 'main';
+@import 'post';
 
 
 html {
@@ -20,43 +21,11 @@ html {
     border: 19px solid $white;
 }
 
-.white-bg {
-    padding-bottom: 1.35vw;
-}
-
-#title {
-    font-size: 4.28vw;
-    line-height: 4.75vw;
-    margin-left: -0.06em;
-    padding-bottom: 0.5em;
-
-    @media only screen and (max-width: 932px) {
-        font-size: 40px;
-        line-height: 45px;
-    }
-}
-
-.page-title aside, section:first-child {
-    padding-top: 10.5vw;
-}
-
-
-@media only screen and (max-width: 1300px) {
-    aside {
-        display: none;
-    }
-}
-
-.navigation {
-    padding-top: 5.35vw;
-    color: $white;
-
-    span:last-child {
-        float: right;
-    }
-}
-
 .article-content-wrapper {
+    .date {
+        padding-bottom: 0.8em;
+    }
+
     #desc {
         font-size: 30px;
         line-height: 1.5em;
@@ -90,7 +59,7 @@ html {
                 color: $gray;
                 max-width: 153px;
                 font-size: 16px;
-                line-height: 23px;   
+                line-height: 23px;
             }
 
             @media only screen and (max-width: 530px) {
@@ -101,4 +70,9 @@ html {
             }
         }
     }
+}
+
+#content code.highlighter-rouge {
+    background: $gray;
+    color: $white;
 }

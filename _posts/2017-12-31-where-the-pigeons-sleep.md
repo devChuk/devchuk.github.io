@@ -2,7 +2,6 @@
 layout: post
 title: Where the Pigeons Sleep
 thumbnail: /res/img/notebook/pigeons-thumb.jpg
-desc: Est. 10 minutes read
 excerpt: I just moved into a room in East Village, a few blocks away from the Facebook NY Office. It's going to be a short stay, but I'm not sure how long I'll be staying. I was making my bed on my first night here and I found, in the alleyway directly above my window, a cement-gray pigeon. It was perched next to each other on an iron bar, eyes closed, and didn't seem to notice as I peered up at them. It just sat there, its beak pointing into the nothingness of our dark, thin alleyway.
 ---
 
@@ -25,6 +24,3 @@ Solitude. Despite their constant fluttering, pigeons too need a place of rest. I
 And I must remember: solitude is not loneliness. Loneliness is the opposite, an impatience and crackling anxiety. Solitude is a noun that describes the physical state of having no one else present. Loneliness is a noun that describes the aching sadness one can suffer from experiencing solitude. I must also remember that solitude requires one additional thing: space. Which is scarce in this city, but somehow found in this small corner. Which the pigeon within my reach does not have. By leaning out the window, I am depriving it of its space.
 
 So I close the window. I leave it alone to its bed, and I come back inside to finish making mine.
-
-<h6 style="color: #808080;">Brian Chuk. Written in a summer night from East Village, NYC</h6>
-<h6 style="color: #808080;">Photo by <a target="_blank" href="https://unsplash.com/@toddquackenbush">Todd Quackenbush</a> on <a target="_blank" href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></h6>

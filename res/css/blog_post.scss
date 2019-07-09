@@ -5,6 +5,7 @@
 // IMPORTS //
 //
 @import 'main';
+@import 'post';
 
 
 html {
@@ -24,72 +25,21 @@ html {
     padding-bottom: 1.35vw;
 }
 
-#title {
-    font-size: 4.28vw;
-    line-height: 4.75vw;
-    margin-top: -0.21em;
-    padding-bottom: 0.5em;
-
-    @media only screen and (max-width: 932px) {
-        font-size: 40px;
-        line-height: 45px;
-
-
-    }
-}
-
-.page-title aside, section:first-child {
-    padding-top: 10.5vw;
-}
-
-
-@media only screen and (max-width: 1300px) {
-    aside {
-        display: none;
-    }
-}
-
 .details {
     padding-bottom: 0.8em;
-
-    span:last-child {
-        float: right;
-    }
-}
-
-.details:last-of-type {
-    padding-bottom: 0;
-    padding-top: 5.35vw;
-    color: $black;
 }
 
 #content {
-    font-family: 'Lyon Text';
-
     > p:first-of-type {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 1.5em;
 
         @media only screen and (max-width: 932px) {
             font-size: 25px;
         }
     }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Circular';
-    }
-
-    h1 { font-size: 2.3em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.47em; }
-    h4 { font-size: 1.42em; }
-    h5 { font-size: 1.13em; }
-    h6 { font-size: 1.05em; }
-
-    blockquote {
-        font-family: 'Lyon Display';
-    }
 }
+
 
 .thin-content-wrapper {
     display: flex;
@@ -124,7 +74,7 @@ html {
             figure {
                 overflow: hidden;
                 margin-bottom: 10px;
-                
+
                 img {
                     width: 100%;
                     margin: -11% 0;
@@ -168,9 +118,9 @@ html {
         padding-left: 10px;
         color: white;
 
-        .lyon {
-            font-size: 1.23vw;
-            line-height: 1.5em;
+        #text {
+            font-size: 22px;
+            line-height: 1.58em;
         }
 
         > div {
@@ -207,7 +157,7 @@ html {
             max-width: 100%;
             padding-left: 0;
             padding-top: 5.35vw;
-            
+
             .lyon {
                 font-size: 22px;
             }
@@ -236,8 +186,6 @@ html {
 }
 
 .date > span {
-    // float: none !important;
-
     a {
         color: $black;
     }
@@ -250,4 +198,10 @@ html {
 
 #left {
     float: left;
+}
+
+
+#mailing-list-cta, #side-info {
+    // TEMP
+    display: none;
 }

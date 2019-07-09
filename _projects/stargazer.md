@@ -4,8 +4,8 @@ title: Stargazer
 date: Nov 2017
 thumbnail: /res/img/projects/stag-thumb.jpg
 thumbnail_size: half-img
-client: CLIENT
-client_name: Personal Project
+client: PROJECT
+client_name: brianch.uk
 role: Javascript developer and Blender modeler
 platforms: Web
 status: Complete

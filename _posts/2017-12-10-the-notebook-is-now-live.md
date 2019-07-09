@@ -2,7 +2,6 @@
 layout: post
 title: The NOTEBOOK is now live!
 thumbnail: /res/img/notebook/insta-desktop.jpg
-desc: Est. 2 minutes read
 excerpt: A couple years ago, my cousin stopped by and gave me a black Moleskine notebook. He was a graphic designer, and liked to use his notebooks for prototype sketches. “You can use this for your ideas,” he said. It was slightly larger than my hands. The book had a hard, durable cover, 200 ruled pages, a braided bookmark, and an elastic closure.
 ---
 
@@ -32,6 +31,3 @@ If you're interested in this website's design and implementation, I'll write it 
 - the [iA Writer mobile](https://ia.net/writer/) app is useful for writing on the go.
 - the [Hemingway editor](http://www.hemingwayapp.com) helps me proofread my work
 - Nimran's [Read-O-Meter](http://niram.org/read/) estimates the reading time of my posts
-
-<h6 style="color: #808080;">Brian Chuk. Written from Greenwich Village, New York City</h6>
-<h6 style="color: #808080;">Photo by yours truly</h6>

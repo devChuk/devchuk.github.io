@@ -23,7 +23,8 @@
     padding-top: 50px;
     width: 41.4vw;
     font-size: 3.4vw;
-    line-height: 4.5vw;
+    line-height: 4.5vw; // TODO:
+    // line-height: 1.4em;
 
     p {
         padding-top: 1.2em;
@@ -81,6 +82,11 @@
             width: 66%;
             font-size: 1.55vw;
             line-height: 1.71vw;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
 
             @media only screen and (max-width: 1609px) {
                 margin-left: 15px;

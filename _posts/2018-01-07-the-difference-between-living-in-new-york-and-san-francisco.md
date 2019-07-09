@@ -2,7 +2,6 @@
 layout: post
 title: The Difference Between Living in New York and San Francisco
 thumbnail: /res/img/notebook/nysf-thumb.jpg
-desc: Est. 6 minutes read
 excerpt: "My high school friends and I just left our pit stop in Sacramento, and had a couple hours until we reached our private airbnb by Lake Tahoe. The goal of our trip: escape urban San Francisco and go stargazing. We were in one of the last days of summer, and I've spent around four months living in the SF Bay Area. I was worried that I'd regret moving here when I flew over."
 ---
 
@@ -22,7 +21,7 @@ Overall, the city has more mild temperatures. Its average temperature ranges fro
 
 Here, I've seen a hurricane, hail, intense blizzards, tropical thunderstorms, perfect beach weather, and SF weather. Currently, I'm in NYC and it's five degrees outside. **Five degrees**. I had ice cream last week and it was warmer than the weather. It's so cold that I can insta-chill my drinks outside my window. It's painful being outdoors.
 
-# Getting around
+# Getting Around
 
 If you look at the NYC MTA subway, it looks like someone threw a pot of Crayola-themed spaghetti evenly at a map. It's a complex, sprawling system that covers every square foot of the city. The subway is a result of competing transit companies combining into monopolies and eventually being bought by the city. The reason why we have numbered and lettered lines is because they used to be separate companies called the IRT and BRT, respectively.
 
@@ -83,9 +82,3 @@ In the end, yes, the factors above are important when living somewhere new&mdash
 We walked back from the balcony into the house to finish the rest of our unpacking. I lied down onto a couch and passed out&mdash;too exhausted from the long car ride.
 
 The next morning, I woke up to a warm, quiet sunlight flooding in from the windows. Someone had draped a couple blankets over me while I slept.
-
-<h6 style="color: #808080;">Brian Chuk. Written during one of the coldest winters ever in NYC. </h6>
-
-<h6 style="color: #808080;">P.S. I'm actually escaping to Los Angeles in a week! Talk about what I'm doing there soon.</h6>
-
-<h6 style="color: #808080;">Photos by Joshua Sortino, Ian Simmonds, Frank Köhntopp on <a target="_blank" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>. Comic by Sara Cooper</h6>
