@@ -16,14 +16,13 @@ print fileName
 
 text = """---
 layout: post
-title: The NOTEBOOK is now live!
+title: {}
 thumbnail: /res/img/Flight.png
-desc: Est. 10 minutes read
-excerpt: This is an excerpt. Keep it at 100--200 words.
+excerpt:
 ---
 
-<h6 style="color: #808080;">Brian Chuk. Written in NYC</h6>
-"""
+
+""".format(title)
 
 file = open(fileName, "w")
 file.write(text)

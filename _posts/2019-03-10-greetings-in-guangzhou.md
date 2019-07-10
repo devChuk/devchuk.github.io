@@ -5,13 +5,13 @@ thumbnail: /res/img/notebook/gz-thumb.jpg
 excerpt: "Greetings from Guangzhou, where I’ll be staying for roughly a month to see family. Later, I’ll be on my way to Thailand for a spell. I’m drafting this post in Foshan, staying at a relative’s place here."
 ---
 
-![An apartment in Chongqing](/res/img/notebook/gz-building.jpg)
+<img class="rzimg" src="/res/img/notebook/gz-building.jpg" alt="An apartment in Chongqing" />
 
 Greetings from Guangzhou, where I'll be staying for roughly a month to see family. Later, I'll be on my way to Thailand for a spell. I'm drafting this post in Foshan, staying at a relative's place here.
 
 In fact, he just moved in a couple days ago, so the apartment is completely barren. There's zero furniture—I'll have to use a sleeping bag tonight. We're trying to set up the place for the three basic needs. You know: shelter, furnishing the space & getting duplicate keys; food, going on a grocery run tonight; and—of course—WiFi. I'll stop by a China Unicom tomorrow morning for that.
 
-![A street in Guangzhou](/res/img/notebook/gz-street.jpg)
+<img class="rzimg" src="/res/img/notebook/gz-street.jpg" alt="A street in Guangzhou" />
 
 All this work into settling into here makes me think about how I live back in New York. As a college student, I did just the essentials to survive in the city. I cooked not because it was fun, but because it saved money. I stayed in apartments with old, failing plumbing systems in even older walk-ups. Once, I subletted a living room from a friend and we converted it into a "bedroom." We had assembled two large, white bookshelves and made them face a corner of the room, so they worked as the other two "walls" of the room. There was only enough room for the bed. The rent was *amazing*, though, $800/month for a place six minutes from Washington Square. Average rent prices in that area usually run around $1500 to $1800 a month.
 
@@ -25,4 +25,4 @@ I'd like to host more. I'll invite friends over and we can bake stuff together. 
 
 I'm looking forward to it.
 
-![An alleyway in Daxin](/res/img/notebook/gz-alley.jpg)
+<img class="rzimg" src="/res/img/notebook/gz-alley.jpg" alt="An alleyway in Daxin" />

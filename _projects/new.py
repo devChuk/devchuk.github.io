@@ -8,19 +8,19 @@ print fileName + '\n'
 
 text = """---
 layout: project
-title: Parrot
+title: {}
 date: Feb 2015
 thumbnail: http://devchuk.github.io/devchukV1/res/img/portimg/parrot/prof.jpg
 thumbnail_size: half-img
-client: HACKATHON
-client_name: McHacks II
+client: PROJECT
+client_name: {}
 role: Full-stack developer
-platforms: Android, iOS, Android Wear
-status: Dormant
+platforms: Web
+status: Active
 featured: True
 desc: Here is a medium-length description about the project.
 ---
-"""
+""".format(title, title)
 
 file = open(fileName, "w")
 file.write(text)
