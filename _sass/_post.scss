@@ -88,11 +88,8 @@
     code, q {
         font-family: 'Hack';
         font-size: 1rem;
-        // background: #111111;
-        // color: $white;
-
-        background: $lightGray;
-        color: $darkGray;
+        background: #111111;
+        color: $white;
 
         @media only screen and (max-width: 932px) {
             font-size: 0.75rem;

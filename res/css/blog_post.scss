@@ -38,6 +38,11 @@ html {
             font-size: 25px;
         }
     }
+
+    > code, > q {
+        background: $lightGray;
+        color: $darkGray;
+    }
 }
 
 
