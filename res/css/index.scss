@@ -50,6 +50,11 @@
     }
 }
 
+#mail {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 #blog-posts {
     display: flex;
 
